@@ -3,6 +3,7 @@
 <head>
 <link href="../styles/style.css" rel="stylesheet" type="text/css" media="all">
 <link href="../styles/dropdown.css" rel="stylesheet" type="text/css" media="all">
+<link href="../styles/slideshow.css" rel="stylesheet" type="text/css" media="all">
 <style>
 
 
@@ -46,19 +47,150 @@
       <a href="etsy">Store</a></div></li>
 </ul>
 </div>
-  
-<br>
+
 <br>
 
-<!-- Many images -->
 <div class="colorblock">
 <p style="font-size: 1.5vw; color: white; text-align: center;">
 Recent Work
 </p>
-</div>
+</div>  
 
 <br>
+
+<!-- Slideshow chunk -->
+
+<div class="slideshow-container">
+
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 12</div>
+  <img src="../images/Reclamation.jpg" style="height:60vw; max-width: 60vw;">
+  <div class="text">Reclamation</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 12</div>
+  <img src="../images/Petrichor.jpg" style="height:60vw;">
+  <div class="text">Petrichor</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 12</div>
+  <img src="../images/Aloe_There.jpg" style="max-height:60vw; max-width: 60vw; margin-top: 20.5vw; margin-bottom: 20.5vw;">
+  <div class="text">Aloe There</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">4 / 12</div>
+  <img src="../images/Saguaro_East.jpg" style="max-height:60vw; max-width: 60vw; margin-top: 10vw; margin-bottom: 10vw;">
+  <div class="text">Saguaro East</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">5 / 12</div>
+  <img src="../images/The_Ancients.jpg" style="height:60vw;">
+  <div class="text">The Ancients</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">6 / 12</div>
+  <img src="../images/Missed_Turn.jpg" style="height:60vw">
+  <div class="text">Missed Turn</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">7 / 12</div>
+  <img src="../images/Extension.jpg" style="height:60vw">
+  <div class="text">GREEN</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">8 / 12</div>
+  <img src="../images/Overburdened_by_Strawberries_I.jpg" style="height:60vw">
+  <div class="text">Overburdened by Strawberries I</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">9 / 12</div>
+  <img src="../images/Overburdened_by_Strawberries_II.jpg" style="height:60vw">
+  <div class="text">Overburdened by Strawberries II</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">10 / 12</div>
+  <img src="../images/Snowberries.jpg" style="height:60vw">
+  <div class="text">Overburdened by Strawberries II</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">11 / 12</div>
+  <img src="../images/West_Clear_Creek.jpg" style="height:60vw">
+  <div class="text">Overburdened by Strawberries II</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">12 / 12</div>
+  <img src="../images/Jellies.jpg" style="height:60vw">
+  <div class="text">Overburdened by Strawberries II</div>
+</div>
+
+
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span> 
+  <span class="dot" onclick="currentSlide(5)"></span> 
+  <span class="dot" onclick="currentSlide(6)"></span>
+  <span class="dot" onclick="currentSlide(7)"></span>
+  <span class="dot" onclick="currentSlide(8)"></span>
+  <span class="dot" onclick="currentSlide(9)"></span>
+  <span class="dot" onclick="currentSlide(10)"></span>
+  <span class="dot" onclick="currentSlide(11)"></span>
+  <span class="dot" onclick="currentSlide(12)"></span>
+  
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
 <br>
+
+<!-- Images chunk -->
+
+
 
 <div class="images-wrap">
     <div class="container">
