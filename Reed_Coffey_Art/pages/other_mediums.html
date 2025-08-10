@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-
 <link href="../styles/style.css" rel="stylesheet" type="text/css" media="all">
+<link href="../styles/dropdown.css" rel="stylesheet" type="text/css" media="all">
 <style>
 
 .container {
@@ -24,7 +24,21 @@
 <!-- Link bar -->
 <div class="header">
 <ul class="title-content-list">
-    <li><div class="title"><a href="index.html">Reed Coffey Art</a></div><div class="content"><a href="oils.html">Oil Paintings</a><a href="other_mediums.html">Other Mediums</a><a href="available.html">Available Works</a><a href="https://bsky.app/profile/throughthereeds.bsky.social">Bluesky</a><a href="etsy">Store</a></div></li>
+    <li><div class="title"><a href="index.html">Reed Coffey Art</a></div>
+      <div class="content">
+        <div class="dropdown">
+            <button class="dropbtn">Oil Paintings</button>
+            <div class="dropdown-content">
+              <a href="recent_work.html">Recent Work</a>
+              <a href="agaves.html">Agave Studies</a>
+              <a href="explorations.html">Explorations</a>
+            </div>
+
+        </div>
+      <a href="other_mediums.html">Other Mediums</a>
+      <a href="available.html">Available Works</a>
+      <a href="https://bsky.app/profile/throughthereeds.bsky.social">Bluesky</a>
+      <a href="etsy">Store</a></div></li>
 </ul>
 </div>
 <br>
@@ -202,7 +216,7 @@ Small Woodcrafts
   
   <br><br>
 <footer>
-<div class="title"><a href="index.html">Reed Coffey Art</a></div>
+<div class="title" style= "font-size: 20px; margin-top: 2vw;"><a href="index.html">Reed Coffey Art</a></div>
 <div class="images-wrap">
     <a href="https://bsky.app/profile/throughthereeds.bsky.social"><img src="../images/Bsky.png" alt="Bluesky" style="width:42px;height:42px;"></a>
 </div>
