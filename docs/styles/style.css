@@ -33,11 +33,11 @@ ul.title-content-list > li { /* stuff for making links at top nice*/
 }
 
 ul.title-content-list > li > .title { /* homepage link formatting*/
-  font-size: 1.5vw;
+  font-size: 2vw;
 }
 
 ul.title-content-list > li > .content { /* other link formatting*/
-  font-size: 1vw;
+  font-size: 1.5vw;
 }
 
 .container { /* Create space between images on the same line */
