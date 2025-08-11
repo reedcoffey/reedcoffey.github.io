@@ -1,112 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="../styles/style.css" rel="stylesheet" type="text/css" media="all">
-<link href="../styles/dropdown.css" rel="stylesheet" type="text/css" media="all">
+<link href="../docs/styles/style.css" rel="stylesheet" type="text/css" media="all">
+<link href="../docs/styles/dropdown.css" rel="stylesheet" type="text/css" media="all">
+<link href="../docs/styles/index.css" rel="stylesheet" type="text/css" media="all">
+
 <style>
-
-.aloe-image { /* Image formatting */
-  height: auto;
-  width: 93vw;
-  display: block;
-  transition: .5s ease;
-  backface-visibility: hidden;
-}
-
-.xl-image {
- padding-left: 14.5vw 
-}
-
-.bottom-image {
- padding-right: 14.5vw; 
- height: auto;
-  width: 30vw;
-  display: block;
-  transition: .5s ease;
-  backface-visibility: hidden;
-}
-
-.medium-image-index { /* Image formatting */
-  height: 22vw;
-  width: auto;
-  display: block;
-  transition: .5s ease;
-  backface-visibility: hidden;
-  padding-right: 14.5vw 
-}
-
-
-#fp  {
-float: left;    
- margin: 0 15px 0 0;
-}
-
-#portrait  {
-float: right;    
- margin: 0 15px 0 0;
-}
-
-h3 {text-align: center;}
-
-.images-right { /* Structure of each line of images */
-  display: flex; 
-  align-items: right; 
-  padding-left: 10px;
-  justify-content:right;
-  flex-direction:row;
-}
-
-.images-left { /* Structure of each line of images */
-  display: flex; 
-  align-items: left; 
-  padding-left: 10px;
-  justify-content:left;
-  flex-direction:row;
-}
-
-.textborderleft {
- border-width:3px;
- border-style:solid;
- border-color:#53784F;
- padding-left: 2.5vw;
- padding-right: 2.5vw;
-  padding-top: 1vw;
- padding-bottom: 1vw;
- margin-left: 13.8vw;
- margin-right: 5vw;
- background-color: #53784F;
-}
-
-.textborderright {
- border-width:3px;
- border-style:solid;
- border-color:#53784F;
- padding-left: 2.5vw;
- padding-right: 2.5vw;
- padding-top: 1vw;
- padding-bottom: 1vw;
- margin-left: 3vw;
- margin-right: 13.8vw;
- background-color: #53784F;
-}
-
-.colorblock {
-  background-color: #53784F; 
-  width: 100%; 
-  height: auto;
-}
-
-.gridwrapper {
-  display: grid;
-  grid-template-columns: 30vw 50vw;
-}
-
 
 </style>
 </head>
 
 <body>
-
 <!-- Link bar -->
 
 <div class="header">
@@ -116,9 +20,9 @@ h3 {text-align: center;}
         <div class="dropdown">
             <button class="dropbtn">Oil Paintings</button>
             <div class="dropdown-content">
-              <a href="recent_work.html">Recent Work</a>
-              <a href="agaves.html">Agave Studies</a>
-              <a href="explorations.html">Explorations</a>
+              <a href="../docs/pages/recent_work.html">Recent Work</a>
+              <a href="../docs/pages/agaves.html">Agave Studies</a>
+              <a href="../docs/pages/explorations.html">Explorations</a>
             </div>
 
         </div>
@@ -132,11 +36,11 @@ h3 {text-align: center;}
 <br>
 
 <div class="images-wrap">
-<div class="container">
-    <img src="../images/Aloe_There.jpg" alt="My aloes" class="aloe-image" id="fp"/>
+  <div class="container">
+      <img src="../docs/images/Aloe_There.jpg" alt="My aloes" class="aloe-image" id="fp"/>
   </div>
-  </div>
-  
+</div>
+    
 <br>
 
 <div class="colorblock">
@@ -147,7 +51,7 @@ h3 {text-align: center;}
       </p>
     </div>
     <div class="container">
-      <img src="../images/Reed.png" alt="It me" class="medium-image-index" id="portrait"/>
+      <img src="../docs/images/Reed.png" alt="It me" class="medium-image-index" id="portrait"/>
     </div>
   </div>
 </div>
@@ -158,7 +62,7 @@ h3 {text-align: center;}
 
 <div class="images-left">
   <div class="container">
-   <img src="../images/Petrichor.jpg" alt="A winding path" class="xl-image" id="fp"/>
+   <img src="../docs/images/Petrichor.jpg" alt="A winding path" class="xl-image" id="fp"/>
   </div>
   <div>
     <div class="textborderright" style="margin-top: 7vw;">
@@ -166,7 +70,7 @@ h3 {text-align: center;}
       The Pathways series is an examination of the marks people leave on the land as they move through it. Inspired largely by the trailwork that represents a pivotal point in Reed's career path, walkways weave through colorful landscapes over the course of several paintings. Both the journey and the destination are celebrated through the realistic style with a touch of whimsy that is characteristic of Reed's work.
       <br>
       <br>
-      Pathways aims to inspire curiosity about what's around the next bend of the trail; what sights and secrets the landscape ahead holds. There's a balance to be had between putting one foot ahead of the other, moving through steep terrain or exhaustion, and slowing down to appreciate the space you're in at a given moment.
+      Pathways inspires curiosity about what's around the next bend of the trail; what sights and secrets the landscape ahead holds. There's a balance to be had between putting one foot ahead of the other, moving through steep terrain or exhaustion, and slowing down to appreciate the space you're in at a given moment.
       </p>
     </div>
   </div>
@@ -180,14 +84,13 @@ h3 {text-align: center;}
       Morphology is Reed's first large pyrography project. Wood and watercolor come together to depict a variety of berries, drawing attention to the myriad of ways similar structures can express themselves.
       </p>
     </div>
-      <img src="../images//Berries_Square.jpg" alt="A green and white mural showing California poppies in the negative" class="bottom-image" id="fp"/>
+      <img src="../docs/images/Berries_Square.jpg" alt="A green and white mural showing California poppies in the negative" class="bottom-image" id="fp"/>
     </div>
   </div>
 </div>
 
 <br>
 <br>
-
 
 <footer>
 <div class="title" style= "font-size: 20px; margin-top: 2vw;"><a href="index.html">Reed Coffey Art</a></div>
