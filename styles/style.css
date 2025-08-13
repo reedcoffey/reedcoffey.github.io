@@ -11,7 +11,7 @@ body {
   margin: 0px;
   height: 100%;
   padding: 0;
-  font-size: 5vw;
+  font-size: 10vw;
 }
 
 a { /* link formatting */
@@ -75,7 +75,7 @@ ul.title-content-list > li > .content { /* other link formatting*/
 .text { /* Font size for titles of pictures */
   background-color: #53784F;
   color: white;
-  font-size: 16px;
+  font-size: 32px;
   padding: 16px 32px;
 }
 
@@ -137,10 +137,9 @@ footer {
 
 
 
-
 @media only screen and (max-width: 1000px) {
-  body {
-    font-size: 45vw;
+  p {
+    font-size: 16pt;
   }
   
 ul.title-content-list > li {
@@ -215,6 +214,10 @@ ul.title-content-list > li > .content { /* other link formatting*/
   .mobile-break { 
      display: block;
    margin: 10px 0;
+  }
+
+    .mobile-remove-break { 
+     display: none;
   }
 
 } /*End of mobile formatting */
