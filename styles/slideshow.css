@@ -160,7 +160,7 @@
 
   .prev, .next {
     cursor: pointer;
-    position: fixed;
+    position: absolute;
     top: 50%;
     width: auto;
     margin-top: 0;
@@ -172,6 +172,7 @@
     border-radius: 0 0 0 0;
     user-select: none;
   }
+
 
   /* The dots/bullets/indicators */
   .dot {
@@ -224,8 +225,15 @@
     padding-bottom: 45px;
     margin-left: 0;
   }
-  .mobile-break { 
-    display: none; 
+
+  .text {
+    color: #f2f2f2;
+    font-size: 30px;
+    padding: 8px 120px;
+    position: static;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
   }
 
 }
