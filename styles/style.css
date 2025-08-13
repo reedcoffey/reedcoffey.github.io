@@ -134,7 +134,10 @@ footer {
   font-size: 0.5vw;
 }
 
-
+/*ignore mobile image formatting on desktop*/
+.images-wrap-mobile {
+  display: none;
+}
 
 
 @media only screen and (max-width: 1000px) {
@@ -220,6 +223,53 @@ ul.title-content-list > li > .content { /* other link formatting*/
      display: none;
   }
 
+.xl-image {
+  height: 30vw;
+  width: auto;
+  display: block;
+  transition: .5s ease;
+  backface-visibility: hidden;
+   padding-bottom: 45px;
+}
+
+.large-image {
+ height: 30vw;
+  width: auto;
+  display: block;
+  transition: .5s ease;
+  backface-visibility: hidden;
+   padding-bottom: 45px;
+}
+
+.medium-image {
+  height: 30vw;
+  width: auto;
+  display: block;
+  transition: .5s ease;
+  backface-visibility: hidden;
+   padding-bottom: 45px;
+}
+
+.small-image {
+  height: 30vw;
+  width: auto;
+  display: block;
+  transition: .5s ease;
+  backface-visibility: hidden;
+   padding-bottom: 45px;
+}
+
+.images-wrap{
+  display: none;
+}
+
+.images-wrap-mobile {
+  display: flex; 
+  align-items: center; 
+  justify-content:center;
+  flex-direction:row;
+}
+  
 } /*End of mobile formatting */
 
   
