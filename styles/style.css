@@ -268,6 +268,7 @@ ul.title-content-list > li > .content { /* other link formatting*/
   align-items: center; 
   justify-content:center;
   flex-direction:row;
+  flex-wrap: wrap;
 }
   
 } /*End of mobile formatting */
