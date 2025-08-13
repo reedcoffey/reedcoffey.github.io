@@ -140,7 +140,7 @@ footer {
 
 @media only screen and (max-width: 1000px) {
   body {
-    font-size: 45px;;
+    font-size: 45vw;
   }
   
 ul.title-content-list > li {
