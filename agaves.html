@@ -4,6 +4,7 @@
 <link href="../styles/style.css" rel="stylesheet" type="text/css" media="all">
 <link href="../styles/dropdown.css" rel="stylesheet" type="text/css" media="all">
 <link href="../styles/slideshow.css" rel="stylesheet" type="text/css" media="all">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <style>
 
 .container {
@@ -176,8 +177,22 @@ Agave Studies
 </div>
 
 <br>
-<br>
+
+
+<!-- Gallery -->
+<div id="gallery" style="display: flex; flex-wrap: wrap; justify-content: center;"></div>
+
+<script>
+  $.getJSON("image_manifests/agaves.json", function(files) {
+      files.forEach(function(file) {
+          $("#gallery").append("<img src='/images/" + file + "' style='height:35vw; margin:5px;'>");
+      });
+  });
+</script>
+
+<br >
 
 <script src="javascript/footer.js"></script>
 
 </body>
+

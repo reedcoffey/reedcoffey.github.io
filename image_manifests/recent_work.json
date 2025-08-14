@@ -1,3 +1,15 @@
+
 [
-    reclamation.jpg,
+  {"src": "Reclamation.jpg", "title": "Reclamation", "size": "24\"x36\"", "medium": "Oil on canvas"},
+  {"src": "Petrichor.jpg", "title": "Petrichor", "size": "18\"x24\"", "medium": "Oil on canvas"},
+  {"src": "Aloe_There.jpg", "title": "Aloe There", "size": "18\"x24\"", "medium": "Oil on canvas"},
+  {"src": "Saguaro_East.jpg", "title": "Aloe There", "size": "18\"x24\"", "medium": "Oil on canvas"},
+  {"src": "The_Ancients.jpg", "title": "Aloe There", "size": "18\"x24\"", "medium": "Oil on canvas"},
+  {"src": "Missed_Turn.jpg", "title": "Aloe There", "size": "18\"x24\"", "medium": "Oil on canvas"},
+  {"src": "Extension.jpg", "title": "Aloe There", "size": "18\"x24\"", "medium": "Oil on canvas"},
+  {"src": "Overburdened_by_Strawberries_I.jpg", "title": "Aloe There", "size": "18\"x24\"", "medium": "Oil on canvas"},
+  {"src": "Overburdened_by_Strawberries_II.jpg", "title": "Aloe There", "size": "18\"x24\"", "medium": "Oil on canvas"},
+  {"src": "Snowberries.jpg", "title": "Aloe There", "size": "18\"x24\"", "medium": "Oil on canvas"},
+  {"src": "West_Clear_Creek.jpg", "title": "Aloe There", "size": "18\"x24\"", "medium": "Oil on canvas"},
+  {"src": "Jellies.jpg", "title": "Aloe There", "size": "18\"x24\"", "medium": "Oil on canvas"}
 ]
