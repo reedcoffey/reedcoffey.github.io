@@ -6,6 +6,7 @@
 <link href="../styles/slideshow.css" rel="stylesheet" type="text/css" media="all">
 <style>
 
+
 .container {
   position: relative;
   display: inline-block;
@@ -19,31 +20,15 @@
   padding-bottom: 1vw;
 }
 
+
 </style>
 </head>
+
 
 <body>
 
 <!-- Link bar -->
-<div class="header">
-<ul class="title-content-list">
-    <li><div class="title"><a href="https://reedcoffey.github.io/">Reed Coffey Art</a></div>
-      <div class="content">
-        <div class="dropdown">
-            <button class="dropbtn">Oil Paintings</button>
-            <div class="dropdown-content">
-              <a href="recent_work.html">Recent Work</a>
-              <a href="agaves.html">Agave Studies</a>
-              <a href="explorations.html">Explorations</a>
-            </div>
-
-        </div>
-      <a href="other_mediums.html">Other Mediums</a>
-      <a href="available.html">Available Works</a>
-      <a href="https://bsky.app/profile/throughthereeds.bsky.social">Bluesky</a>
-      <a href="etsy">Store</a></div></li>
-</ul>
-</div>
+<script src="javascript/header.js"></script>
   
 <br>
 
@@ -51,59 +36,70 @@
 
 <div class="slideshow-container">
 
-
     <a class="prev" onclick="plusSlides(-1)">❮</a>
 
-  <div class="mySlides fade">
-    <div class="numbertext">1 / 8</div>
-    <img src="../images/Aster.jpg" class="ss-image">
-    <div class="text">Aster</div>
-  </div>
+<div class="mySlides fade">
+  <div class="numbertext">1 / 9</div>
+  <img src="../images/Missed_Turn.jpg" class="ss-image">
+  <div class="text">Missed Turn<br>Oil on canvas<br>24"x36"<br> $650</div>
+</div>
 
-  <div class="mySlides fade">
-    <div class="numbertext">2 / 8</div>
-    <img src="../images/Technicolor_Dreamskull.jpg" class="ss-image">
-    <div class="text">Technicolor Dreamskull</div>
-  </div>
+<div class="mySlides fade">
+  <div class="numbertext">1 / 9</div>
+  <img src="../images/Aster.jpg" class="ss-image">
+  <div class="text">Aster <br>Oil on canvas<br> $70</div>
+</div>
 
-  <div class="mySlides fade">
-    <div class="numbertext">3 / 8</div>
-    <img src="../images/Sketch_1.jpg" class="ss-image">
-    <div class="text">Sketch I</div>
-  </div>
+<div class="mySlides fade">
+  <div class="numbertext">2 / 9</div>
+  <img src="../images/Technicolor_Dreamskull.jpg" class="ss-image">
+  <div class="text">Technicolor Dreamskull <br>Oil on canvas<br> $80</div>
+</div>
 
-  <div class="mySlides fade">
-    <div class="numbertext">4 / 8</div>
-    <img src="../images/Sketch_2.jpg" class="ss-image">
-    <div class="text">Sketch II</div>
-  </div>
+<div class="mySlides fade">
+  <div class="numbertext">3 / 9</div>
+  <img src="../images/Sketch_1.jpg" class="ss-image">
+  <div class="text">Sketch I <br><br> $35</div>
+</div>
 
-  <div class="mySlides fade">
-    <div class="numbertext">5 / 8</div>
-    <img src="../images/Coral_Bean.jpg" class="ss-image">
-    <div class="text">Coral Bean</div>
-  </div>
+<div class="mySlides fade">
+  <div class="numbertext">4 / 9</div>
+  <img src="../images/Sketch_2.jpg" class="ss-image">
+  <div class="text">Sketch II <br><br> $35</div>
+</div>
 
-  <div class="mySlides fade">
-    <div class="numbertext">6 / 8</div>
-    <img src="../images/BAER_I.jpg" style="height:30vw; margin-top: 15vw; margin-bottom: 15vw;">
-    <img src="../images/BAER_II.jpg" style="height:30vw; margin-top: 15vw; margin-bottom: 15vw;">
-    <div class="text">BAER II</div>
-  </div>
+<div class="mySlides fade">
+  <div class="numbertext">5 / 9</div>
+  <img src="../images/Coral_Bean.jpg" class="ss-image">
+  <div class="text">Coral Bean <br><br> $35</div>
+</div>
 
-  <div class="mySlides fade">
-    <div class="numbertext">7 / 8</div>
-    <img src="../images/Berberis_fremontii.jpg" class="ssw-image" style="margin-top: 9.2vw; margin-bottom: 9.2vw;">
-    <div class="text">Berberis fremontii</div>
-  </div>
+<div class="mySlides fade">
+  <div class="numbertext">6 / 9</div>
+  <img src="../images/BAER_I.jpg" style="height:60vw">
+  <div class="text">BAER I</div>
+</div>
 
-  <div class="mySlides fade">
-    <div class="numbertext">8 / 8</div>
-    <img src="../images/My_Honey.jpg" class="ssw-image" style="margin-top: 2.85vw; margin-bottom: 2.85vw;">
-    <div class="text">My Honey</div>
-  </div>
+<div class="mySlides fade">
+  <div class="numbertext">7 / 9</div>
+  <img src="../images/BAER_II.jpg" style="height:60vw">
+  <div class="text">BAER II</div>
+</div>
 
-  <a class="next" onclick="plusSlides(1)">❯</a>
+<div class="mySlides fade">
+  <div class="numbertext">8 / 9</div>
+  <img src="../images/Berberis_fremontii.jpg" style="height:60vw">
+  <div class="text">Berberis fremontii</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">9 / 9</div>
+  <img src="../images/My_Honey.jpg" style="height:60vw">
+  <div class="text">My Honey</div>
+</div>
+
+
+<a class="next" onclick="plusSlides(1)">❯</a>
 
 </div>
 
@@ -161,6 +157,14 @@ Explorations
 <br>
 
 <div class="images-wrap">
+
+    <div class="container">
+    <img src="../images/Missed_Turn.jpg" alt="Oil painting of a boardwalk trail through a forest." class="large-image">
+    <div class="middle">
+      <div class="text">Pathways: Missed Turn <br> 24"x36" <br> Oil on canvas</div>
+    </div>
+  </div>
+
 <div class="container">
     <img src="../images/Aster.jpg" alt="Oil painting of a bright aster of some unknown species against a grassy backdrop." class="large-image">
     <div class="middle">
@@ -245,10 +249,5 @@ Explorations
 <br>
 <br>
 
-<footer>
-<div class="title" style= "font-size: 20px; margin-top: 2vw;"><a href="index.html">Reed Coffey Art</a></div>
-<div class="images-wrap">
-    <a href="https://bsky.app/profile/throughthereeds.bsky.social"><img src="../images/Bsky.png" alt="Bluesky" style="width:42px;height:42px;"></a>
-</div>
-</footer>
+<script src="javascript/footer.js"></script>
 </body>
