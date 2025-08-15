@@ -10,6 +10,11 @@
   justify-content: center;
 }
 
+.dots-container {
+    text-align: center;  /* simple way to center inline-block dots */
+    margin-top: 10px;    /* spacing from slideshow */
+}
+
 /* Hide the images by default */
 .mySlides {
   display: none;
@@ -92,7 +97,7 @@
     width: 70vw;          /* scale relative to viewport width */
     max-width: 100%;      /* never exceed container width */
     height: auto;         /* maintain natural aspect ratio */
-    max-height: 60vh;     /* prevent images from getting too tall */
+    max-height: 50vh;     /* prevent images from getting too tall */
     display: block;
     margin: 0 auto;       /* center image horizontally */
     transition: 0.5s ease;
