@@ -25,131 +25,48 @@
 
 <body>
 
-  
 
 <!-- Link bar -->
 <script src="javascript/header.js"></script>
 
 <br class="mobile-break">
 
-
-
 <!-- Slideshow chunk -->
 
-<div class="slideshow-container">
-
+<div class="slideshow-wrapper">
+  <div class="slideshow-container">
     <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+  </div>
 
-<div class="mySlides fade">
-  <div class="numbertext">1 / 11</div>
-  <img src="../images/Reclamation.jpg" class="ss-image">
-  <div class="text">Reclamation</div>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">2 / 11</div>
-  <img src="../images/Petrichor.jpg" class="ss-image">
-  <div class="text">Petrichor</div>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">3 / 11</div>
-  <img src="../images/Aloe_There.jpg" class="ssw-image">
-  <div class="text">Aloe There</div>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">4 / 11</div>
-  <img src="../images/Saguaro_East.jpg" class="ssw-image">
-  <div class="text">Saguaro East</div>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">5 / 11</div>
-  <img src="../images/The_Ancients.jpg" class="ss-image">
-  <div class="text">The Ancients</div>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">6 / 11</div>
-  <img src="../images/Missed_Turn.jpg" class="ss-image">
-  <div class="text">Missed Turn</div>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">7 / 11</div>
-  <img src="../images/Extension.jpg" class="ss-image">
-  <div class="text">GREEN</div>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">8 / 11</div>
-  <img src="../images/Overburdened_by_Strawberries_I.jpg" class="ss-image-paired-narrow">
-  <img src="../images/Overburdened_by_Strawberries_II.jpg" class="ss-image-paired-wide">
-  <div class="text">Overburdened by Strawberries I & II</div>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">9 / 11</div>
-  <img src="../images/Snowberries.jpg" class="ss-image">
-  <div class="text">Overburdened by Strawberries II</div>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">10 / 11</div>
-  <img src="../images/West_Clear_Creek.jpg" class="ss-image">
-  <div class="text">Overburdened by Strawberries II</div>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">11 / 11</div>
-  <img src="../images/Jellies.jpg" class="ss-image">
-  <div class="text">Jellies</div>
-</div>
-
-<script>
-$.getJSON("image_manifests/recent_work.json", function(files) {
-    const container = $(".slideshow-container");
-    files.forEach(function(file, index) {
-        const slideNumber = index + 1;
-        const totalSlides = files.length;
-
-        // Build slide HTML
-        let slideHTML = `<div class="mySlides fade">
-            <div class="numbertext">${slideNumber} / ${totalSlides}</div>
-            <img src="../recent_work/${file.file}" class="ss-image">
-            <div class="text">${file.caption}</div>
-        </div>`;
-
-        container.append(slideHTML);
-    });
-});
-</script>
-
-
-<a class="next" onclick="plusSlides(1)">❯</a>
-
-</div>
-
-<div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1)"></span> 
-  <span class="dot" onclick="currentSlide(2)"></span> 
-  <span class="dot" onclick="currentSlide(3)"></span> 
-  <span class="dot" onclick="currentSlide(4)"></span> 
-  <span class="dot" onclick="currentSlide(5)"></span> 
-  <span class="dot" onclick="currentSlide(6)"></span>
-  <span class="dot" onclick="currentSlide(7)"></span>
-  <span class="dot" onclick="currentSlide(8)"></span>
-  <span class="dot" onclick="currentSlide(9)"></span>
-  <span class="dot" onclick="currentSlide(10)"></span>
-  <span class="dot" onclick="currentSlide(11)"></span>
-  <span class="dot" onclick="currentSlide(12)"></span>
-  
+  <div class="dots-container"></div>
 </div>
 
 <script>
 let slideIndex = 1;
-showSlides(slideIndex);
+
+$.getJSON("image_manifests/recent_work.json", function(files) {
+    const container = $(".slideshow-container");
+    const dotsContainer = $(".dots-container");
+
+    files.forEach((file, index) => {
+        const caption = `${file.title} <br> ${file.size} <br> ${file.medium}`;
+
+        // Add slide
+        container.append(`
+            <div class="mySlides fade">
+                <img src="/images/${file.src}" class="ss-image" alt="${file.title}">
+                <div class="text">${caption}</div>
+            </div>
+        `);
+
+        // Add corresponding dot
+        dotsContainer.append(`<span class="dot" onclick="currentSlide(${index+1})"></span>`);
+    });
+
+    // Show first slide
+    showSlides(slideIndex);
+});
 
 function plusSlides(n) {
   showSlides(slideIndex += n);
@@ -160,31 +77,24 @@ function currentSlide(n) {
 }
 
 function showSlides(n) {
-  let i;
   let slides = document.getElementsByClassName("mySlides");
   let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
+  if (slides.length === 0) return;
+
+  if (n > slides.length) { slideIndex = 1 }
+  if (n < 1) { slideIndex = slides.length }
+
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
   }
-  for (i = 0; i < dots.length; i++) {
+  for (let i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
-  slides[slideIndex-1].style.display = "block";  
+
+  slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
 </script>
-
-<br>
-
-<div class="colorblock">
-<p style="font-size: 32pt; color: white; text-align: center;">
-Recent Work
-</p>
-</div>  
-
-<br class="mobile-break">
 
 <!-- Gallery -->
 <div id="gallery" style="display: flex; flex-wrap: wrap; justify-content: center;"></div>
