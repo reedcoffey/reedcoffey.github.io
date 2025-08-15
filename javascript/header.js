@@ -9,7 +9,7 @@ template.innerHTML = `
                              <div class="dropdown-content">
                                 <a href="recent_work.html">Recent Work</a>
                                 <a href="agaves.html">Agave Studies</a>
-                                 <a href=".explorations.html">Explorations</a>
+                                 <a href="explorations.html">Explorations</a>
                              </div>
                         </div>
                         <a href="other_mediums.html">Other Mediums</a>

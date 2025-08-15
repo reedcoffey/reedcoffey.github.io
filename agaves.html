@@ -25,69 +25,48 @@
 
 <body>
 
+
 <!-- Link bar -->
 <script src="javascript/header.js"></script>
 
+<br class="mobile-break">
+
 <!-- Slideshow chunk -->
 
-<br>
-<div class="slideshow-container" >
-
+<div class="slideshow-wrapper">
+  <div class="slideshow-container">
     <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+  </div>
 
-<div class="mySlides fade;">
-  <div class="numbertext">1 / 6</div>
-  <img src="../images/Blue_Glow.jpg" class="ss-image">
-  <div class="text">Blue Glow</div>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">2 / 6</div>
-  <img src="../images/Imposter.jpg" class="ss-image">
-  <div class="text">Imposter</div>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">3 / 6</div>
-  <img src="../images/Parryi_I.jpg" class="ss-image">
-  <div class="text">Parryi I</div>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">4 / 6</div>
-  <img src="../images/Parryi_II.jpg" class="ss-image">
-  <div class="text">Parryi II</div>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">5 / 6</div>
-  <img src="../images/Lophantha.jpg" class="ss-image">
-  <div class="text">Lophantha</div>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">6 / 6</div>
-  <img src="../images/Agave_Mini.jpg" class="ss-image">
-  <div class="text">Mini</div>
-</div>
-
-
-<a class="next" onclick="plusSlides(1)">❯</a>
-
-</div>
-
-<div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1)"></span> 
-  <span class="dot" onclick="currentSlide(2)"></span> 
-  <span class="dot" onclick="currentSlide(3)"></span> 
-  <span class="dot" onclick="currentSlide(4)"></span> 
-  <span class="dot" onclick="currentSlide(5)"></span> 
-  <span class="dot" onclick="currentSlide(6)"></span>
+  <div class="dots-container"></div>
 </div>
 
 <script>
 let slideIndex = 1;
-showSlides(slideIndex);
+
+$.getJSON("image_manifests/agaves.json", function(files) {
+    const container = $(".slideshow-container");
+    const dotsContainer = $(".dots-container");
+
+    files.forEach((file, index) => {
+        const caption = `${file.title} <br> ${file.size} <br> ${file.medium}`;
+
+        // Add slide
+        container.append(`
+            <div class="mySlides fade">
+                <img src="/images/${file.src}" class="ss-image" alt="${file.title}">
+                <div class="text">${caption}</div>
+            </div>
+        `);
+
+        // Add corresponding dot
+        dotsContainer.append(`<span class="dot" onclick="currentSlide(${index+1})"></span>`);
+    });
+
+    // Show first slide
+    showSlides(slideIndex);
+});
 
 function plusSlides(n) {
   showSlides(slideIndex += n);
@@ -98,96 +77,47 @@ function currentSlide(n) {
 }
 
 function showSlides(n) {
-  let i;
   let slides = document.getElementsByClassName("mySlides");
   let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
+  if (slides.length === 0) return;
+
+  if (n > slides.length) { slideIndex = 1 }
+  if (n < 1) { slideIndex = slides.length }
+
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
   }
-  for (i = 0; i < dots.length; i++) {
+  for (let i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
-  slides[slideIndex-1].style.display = "block";  
+
+  slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
 </script>
-
 <br>
-
-<div class="colorblock">
-<p style="font-size: 1.5vw; color: white; text-align: center;">
-Agave Studies
-</p>
-</div>
-
 <br>
-
-<!-- Images chunk -->
-
-<div class="images-wrap">
-  <div class="container">
-    <img src="../images/Blue_Glow.jpg" alt="Oil painting of a Blue Glow agave." class="large-image">
-    <div class="middle">
-      <div class="text">Agaves: Blue Glow <br> 24"x36" <br> Oil on canvas</div>
-    </div>
-  </div>
-
-  <div class="container">
-    <img src="../images/Imposter.jpg" alt="Oil painting of an aloe in the style of the rest of the agaves in the series." class="large-image">
-    <div class="middle">
-      <div class="text">Agaves: Imposter <br> 24"x36" <br> Oil on canvas</div>
-    </div>
-  </div>
-
-  <div class="container">
-    <img src="../images/Parryi_I.jpg" alt="Oil painting of an agave." class="large-image">
-    <div class="middle">
-      <div class="text">Agaves: Parryi I <br> 24"x36" <br> Oil on canvas</div>
-    </div>
-  </div>
-
-  
-</div>
-
-<br>
-
-<div class="images-wrap">
-  <div class="container">
-    <img src="../images/Parryi_II.jpg" alt="Oil painting of an agave." class="medium-image">
-    <div class="middle">
-      <div class="text">Agaves: Parryi II <br> 24"x36" <br> Oil on canvas</div>
-    </div>
-  </div>
-
-  <div class="container">
-    <img src="../images/Lophantha.jpg" alt="Oil painting of an agave." class="medium-image">
-    <div class="middle">
-      <div class="text">Agaves: Lophantha <br> 24"x36" <br> Oil on canvas</div>
-    </div>
-  </div>
-
-  <div class="container">
-    <img src="../images/Agave_Mini.jpg" alt="A tiny oil panting of an agave, blue with gold outlines." class="medium-image">
-    <div class="middle">
-      <div class="text">Agaves: Mini <br> 24"x36" <br> Oil on canvas</div>
-    </div>
-  </div>
-</div>
-
-<br>
-
 
 <!-- Gallery -->
 <div id="gallery" style="display: flex; flex-wrap: wrap; justify-content: center;"></div>
 
 <script>
-  $.getJSON("image_manifests/agaves.json", function(files) {
-      files.forEach(function(file) {
-          $("#gallery").append("<img src='/images/" + file + "' style='height:35vw; margin:5px;'>");
-      });
-  });
+$.getJSON("image_manifests/agaves.json", function(files) {
+    files.forEach(function(file) {
+        const title = file.title || "Unknown";
+        const size = file.size || "";
+        const medium = file.medium || "";
+
+        $("#gallery").append(`
+            <div class="container">
+                <img src="/images/${file.src}" alt="${title}" class="large-image" style="padding-top:10px">
+                <div class="middle">
+                    <div class="text">${title}<br>${size}<br>${medium}</div>
+                </div>
+            </div>
+        `);
+    });
+});
 </script>
 
 <br >
@@ -195,4 +125,3 @@ Agave Studies
 <script src="javascript/footer.js"></script>
 
 </body>
-
