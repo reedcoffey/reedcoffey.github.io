@@ -39,7 +39,9 @@
     <a class="prev" onclick="plusSlides(-1)">❮</a>
     <a class="next" onclick="plusSlides(1)">❯</a>
   </div>
-
+<br class="mobile-break">
+<br class="mobile-break">
+<br class="mobile-break">
   <div class="dots-container"></div>
 </div>
 
@@ -97,8 +99,6 @@ function showSlides(n) {
 }
 </script>
 <br>
-<br>
-
 <!-- Gallery -->
 <div id="gallery" style="display: flex; flex-wrap: wrap; justify-content: center;"></div>
 
@@ -111,7 +111,7 @@ $.getJSON("image_manifests/explorations.json", function(files) {
 
         $("#gallery").append(`
             <div class="container">
-                <img src="/images/${file.src}" alt="${title}" class="medium-image" style="padding-top:10px">
+                <img src="/images/${file.src}" alt="${title}" class="large-image" style="padding-top:10px">
                 <div class="middle">
                     <div class="text">${title}<br>${size}<br>${medium}</div>
                 </div>
