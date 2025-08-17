@@ -18,7 +18,7 @@ p{
 
 .fp-image {
   height: auto;
-  width: 30vw;
+  width: 40vw;
   display: block;
   transition: .5s ease;
   backface-visibility: hidden;
@@ -29,7 +29,7 @@ p{
 .bottom-image {
  padding-right: 14.5vw; 
  height: auto;
-  width: 30vw;
+  width: 50vw;
   display: block;
   transition: .5s ease;
   backface-visibility: hidden;
@@ -81,7 +81,7 @@ h3 {text-align: center;}
  padding-top: 1vw;
  padding-bottom: 1vw;
  margin-left: 3vw;
- margin-right: 13.8vw;
+ margin-right: 13vw;
  background-color: #53784F;
 }
 
@@ -110,8 +110,8 @@ h3 {text-align: center;}
   }
 
   .fp-image {
-  height: auto;
-  width: 80vw;
+  height: 100vw;
+  width: auto;
   display: block;
   transition: .5s ease;
   backface-visibility: hidden;
@@ -129,14 +129,14 @@ h3 {text-align: center;}
 .textborderright {
  border-width:3px;
  border-style:solid;
- border-color:#53784F;
+ border-color:hsl(114, 21%, 39%);
  padding-left: 2vw;
  padding-right: 2vw;
  padding-top: 1vw;
  padding-bottom: 1vw;
  margin-left: 0;
  margin-right: 0;
- background-color: #53784F;
+ background-color: hsl(0, 0%, 100%);
 }
 
 .textborderleft {
