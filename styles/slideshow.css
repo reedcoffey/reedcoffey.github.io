@@ -161,7 +161,7 @@
 
 .text {
   color: #f2f2f2;
-  font-size: 2vw;         /* fixed: remove "px" after vw */
+  font-size: 30pt;         /* fixed: remove "px" after vw */
   padding: 8px 5vw;       /* use relative padding instead of fixed 120px */
   box-sizing: border-box; /* ensures padding doesn’t push content outside */
   width: 100%;
