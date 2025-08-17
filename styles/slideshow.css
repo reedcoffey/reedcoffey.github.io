@@ -1,18 +1,25 @@
 * {box-sizing:border-box}
 
-/* Slideshow container */
 .slideshow-container {
   max-width: 75vw;
-  max-height: 100vw;
+  max-height: 80vh; /* adjust for viewport height */
   position: relative;
   margin: auto;
   display: flex;
-  justify-content: center;
+  flex-direction: column;       /* stack images and dots */
+  justify-content: center;      /* vertical centering of image */
+  align-items: center;          /* horizontal centering */
 }
 
-.dots-container {
-    text-align: center;  /* simple way to center inline-block dots */
-    margin-top: 10px;    /* spacing from slideshow */
+
+
+.slideshow-wrapper {
+  flex: 1;                     /* fills remaining height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;          /* vertical centering of image */
+  width: 100%;
 }
 
 /* Hide the images by default */
@@ -36,6 +43,7 @@
   user-select: none;
 }
 
+
 /* Position the "next button" to the right */
 .prev {
   left: 2vw;
@@ -50,13 +58,13 @@
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(82, 82, 82, 0.8);
 }
 
 /* Caption text */
 .text {
   color: #f2f2f2;
-  font-size: 15px;
+  font-size: 2vwpx;
   padding: 8px 120px;
   position: static;
   bottom: 8px;
@@ -64,17 +72,30 @@
   text-align: center;
 }
 
-
+.slideshow-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 70vh;             /* FIXED height for consistent dot spacing */
+  overflow: hidden;         /* prevents slides from overflowing container */
+}
 /* The dots/bullets/indicators */
 .dot {
   cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
+  height: 22px;
+  width: 22px;
+  margin: 0 10px;
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
+}
+
+/* Dot container always at bottom */
+.dots-container {
+  text-align: center;
+  margin-top: 250px;
 }
 
 .active, .dot:hover {
@@ -94,50 +115,22 @@
 
 /*slideshow formatting for vertical pieces*/
 .ss-image {
-    width: 70vw;          /* scale relative to viewport width */
-    max-width: 100%;      /* never exceed container width */
-    height: auto;         /* maintain natural aspect ratio */
-    max-height: 50vh;     /* prevent images from getting too tall */
-    display: block;
-    margin: 0 auto;       /* center image horizontally */
-    transition: 0.5s ease;
-    backface-visibility: hidden;
-    object-fit: contain;  /* ensures proper scaling without stretching */
-    padding-bottom: 20px; /* space for caption */
+  max-width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
 }
 
-/* slideshow formatting for paired pieces */
-.ss-image-paired-narrow{
-  height: 25wv;
-  width: 20wv;
-  max-width: 20vw;
-  margin-top: auto;
-  transition: .5s ease;
-  backface-visibility: hidden;
-   padding-bottom: 45px;
-}
 
-.ss-image-paired-wide{
-  height: auto;
-  width: 40wv;
-  max-width: 40vw;
-  margin-top: auto;
-  transition: .5s ease;
-  backface-visibility: hidden;
-   padding-bottom: 45px;
-}
 
 
 /* Mobile slideshow formatting */
+
 @media only screen and (max-width: 1000px) {
 
   .slideshow-container {
     max-width: 95vw;
     max-height: 100vw;
-    position: relative;
-    margin: auto;
-    display: flex;
-    justify-content: center;
+    margin-top: 35vw;
   }
 
   .prev, .next {
@@ -166,27 +159,6 @@
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
-  }
-
-  .ss-image-paired-narrow{
-    height: 25wv;
-    width: 25wv;
-    max-width: 25vw;
-    margin-top: auto;
-    transition: .5s ease;
-    backface-visibility: hidden;
-    margin-right: 0;
-  }
-
-  .ss-image-paired-wide{
-    height: auto;
-    width: 50wv;
-    max-width: 50vw;
-    margin-top: auto;
-    transition: .5s ease;
-    backface-visibility: hidden;
-    padding-bottom: 45px;
-    margin-left: 0;
   }
 
   .text {

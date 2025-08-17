@@ -229,6 +229,8 @@ ul.title-content-list > li > .content { /* other link formatting*/
 }
 
 
+
+
 /* Mobile formatting */
 
 @media only screen and (max-width: 1000px) {
@@ -238,6 +240,8 @@ ul.title-content-list > li > .content { /* other link formatting*/
   {
   display: none;
   }
+
+
   
   /* Text */
 
@@ -291,8 +295,8 @@ ul.title-content-list > li > .content { /* other link formatting*/
 }
 
 .large-image {
- height: auto;
-  width: 80vw;
+ height: 40vw;
+  width: 2auto;
   display: block;
   transition: .5s ease;
   backface-visibility: hidden;
@@ -300,8 +304,8 @@ ul.title-content-list > li > .content { /* other link formatting*/
 }
 
 .medium-image {
-  height: auto;
-  width: 80vw;
+  height: 30vw;
+  width: auto;
   display: block;
   transition: .5s ease;
   backface-visibility: hidden;
@@ -341,8 +345,9 @@ ul.title-content-list > li > .content { /* other link formatting*/
      display: none;
   }
 
-/* Hamburder menu */
 
+
+/* Hamburder menu */
 
 
 /* Hide the links inside the navigation menu (except for logo/home) */
