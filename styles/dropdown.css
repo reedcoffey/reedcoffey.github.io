@@ -43,10 +43,6 @@
 @media only screen and (max-width: 1000px) {
 
   .dropbtn {
-  background-color: #53784F;
-  color: white;
-  padding: 16px;
   font-size: 45px;
-  border: none;
   }
 }

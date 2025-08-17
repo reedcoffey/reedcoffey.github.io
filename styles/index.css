@@ -99,19 +99,9 @@ h3 {text-align: center;}
   justify-items: center;
 }
 
-@media only screen and (min-width: 1000px) {
-.ignore-on-desktop
-{
-  display: none;
-}
-}
 
 @media only screen and (max-width: 1000px) {
 
-  .ignore-on-mobile
-  {
-  display: none;
-  }
 
   .body {
     font-size: 01vw;
