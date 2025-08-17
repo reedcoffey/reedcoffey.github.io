@@ -1,0 +1,15 @@
+
+[
+  {"src": "GREEN.jpg", "title": "GREEN", "size": "18\"x24\"", "medium": "Oil on canvas"},
+  {"src": "Reclamation.jpg", "title": "Reclamation", "size": "24\"x36\"", "medium": "Oil on canvas"},
+  {"src": "Petrichor.jpg", "title": "Petrichor", "size": "24\"x36\"", "medium": "Oil on canvas"},
+  {"src": "Aloe_There.jpg", "title": "Aloe There", "size": "36\"x12\"", "medium": "Oil on canvas"},
+  {"src": "Saguaro_East.jpg", "title": "Saguaro East", "size": "16\"x12\"", "medium": "Oil on canvas"},
+  {"src": "The_Ancients.jpg", "title": "The Ancients", "size": "24\"x36\"", "medium": "Oil on canvas"},
+  {"src": "Missed_Turn.jpg", "title": "Missed Turn", "size": "24\"x36\"", "medium": "Oil on canvas"},
+  {"src": "Overburdened_by_Strawberries_I.jpg", "title": "Overburdened by Strawberries I", "size": "10\"x20\"", "medium": "Oil on canvas"},
+  {"src": "Overburdened_by_Strawberries_II.jpg", "title": "Overburdened by Strawberries II", "size": "20\"x20\"", "medium": "Oil on canvas"},
+  {"src": "Snowberries.jpg", "title": "Snowberries", "size": "24\"x36\"", "medium": "Oil on canvas"},
+  {"src": "West_Clear_Creek.jpg", "title": "West Clear Creek", "size": "18\"x24\"", "medium": "Oil on canvas"},
+  {"src": "Jellies.jpg", "title": "Jellies", "size": "12\" diameter", "medium": "Oil on canvas"}
+]

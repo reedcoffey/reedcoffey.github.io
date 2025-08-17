@@ -1,0 +1,202 @@
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 75vw;
+  max-height: 100vw;
+  position: relative;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.dots-container {
+    text-align: center;  /* simple way to center inline-block dots */
+    margin-top: 10px;    /* spacing from slideshow */
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: fixed;
+  top: 50%;
+  width: auto;
+  margin-top: 0;
+  padding: 16px;
+  color: rgb(185, 45, 45)
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 0 0 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.prev {
+  left: 2vw;
+  border-radius: 0 0 0 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 2vw;
+  border-radius: 0 0 0 0;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 120px;
+  position: static;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/*slideshow formatting for vertical pieces*/
+.ss-image {
+    width: 70vw;          /* scale relative to viewport width */
+    max-width: 100%;      /* never exceed container width */
+    height: auto;         /* maintain natural aspect ratio */
+    max-height: 50vh;     /* prevent images from getting too tall */
+    display: block;
+    margin: 0 auto;       /* center image horizontally */
+    transition: 0.5s ease;
+    backface-visibility: hidden;
+    object-fit: contain;  /* ensures proper scaling without stretching */
+    padding-bottom: 20px; /* space for caption */
+}
+
+/* slideshow formatting for paired pieces */
+.ss-image-paired-narrow{
+  height: 25wv;
+  width: 20wv;
+  max-width: 20vw;
+  margin-top: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+   padding-bottom: 45px;
+}
+
+.ss-image-paired-wide{
+  height: auto;
+  width: 40wv;
+  max-width: 40vw;
+  margin-top: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+   padding-bottom: 45px;
+}
+
+
+/* Mobile slideshow formatting */
+@media only screen and (max-width: 1000px) {
+
+  .slideshow-container {
+    max-width: 95vw;
+    max-height: 100vw;
+    position: relative;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: 0;
+    padding: 16px;
+    color: rgb(185, 45, 45)
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 0 0 0;
+    user-select: none;
+  }
+
+
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 -5vw;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+
+  .ss-image-paired-narrow{
+    height: 25wv;
+    width: 25wv;
+    max-width: 25vw;
+    margin-top: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    margin-right: 0;
+  }
+
+  .ss-image-paired-wide{
+    height: auto;
+    width: 50wv;
+    max-width: 50vw;
+    margin-top: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    padding-bottom: 45px;
+    margin-left: 0;
+  }
+
+  .text {
+    color: #f2f2f2;
+    font-size: 30px;
+    padding: 8px 120px;
+    position: static;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+
+}

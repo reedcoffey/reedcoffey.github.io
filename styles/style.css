@@ -1,0 +1,308 @@
+/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
+   HTML content. To learn how to do something, just try searching Google for questions like
+   "how to change link color." */
+
+
+
+body {
+  background-color: white;
+  color: black;
+  font-family: Tahoma, sans-serrif;
+  margin: 0px;
+  height: 100%;
+  padding: 0;
+  font-size: 10vw;
+}
+
+a { /* link formatting */
+  color: inherit; /* keep color the same as everything else*/
+  text-decoration: none; /* no underline */
+  padding: 20px; /* make sure links aren't all jammed into each other*/
+}
+
+h3 { /*heading formatting */
+  font-weight: normal;
+  text-align: center;
+}
+
+.link-button-corners {
+  border-radius: 30px;
+  background: #53784F;
+  padding: 20px;
+  width: 200px;
+  height: 4vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.textborderleft {
+ border-width:3px;
+ border-style:solid;
+ border-color:#53784F;
+ padding-left: 2.5vw;
+ padding-right: 2.5vw;
+  padding-top: 1vw;
+ padding-bottom: 1vw;
+ margin-left: 13.8vw;
+ margin-right: 5vw;
+ background-color: #53784F;
+}
+
+ul.title-content-list > li { /* stuff for making links at top nice*/
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 6vw; 
+}
+
+ul.title-content-list > li > .title { /* homepage link formatting*/
+  font-size: 2vw;
+}
+
+ul.title-content-list > li > .content { /* other link formatting*/
+  font-size: 1.5vw;
+}
+
+.container { /* Create space between images on the same line */
+  display:flex;
+  align-items: center; 
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.middle { /* Code I ripped to display titles on hover*/
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container:hover .image { /* Code I ripped to display titles on hover*/
+  opacity: 0.3;
+}
+
+.container:hover .middle { /* Code I ripped to display titles on hover*/
+  opacity: 1;
+}
+
+.div.center{ /* Code I ripped to display titles on hover*/
+  align-items: center; 
+  float: left;
+}
+
+.text { /* Font size for titles of pictures */
+  background-color: #53784F;
+  color: white;
+  font-size: 32px;
+  padding: 16px 32px;
+}
+
+.images-wrap { /* Structure of each line of images */
+  display: flex; 
+  align-items: center; 
+  padding-left: 10px;
+  justify-content:center;
+  flex-direction:row;
+}
+
+.images-wrap-consistent { /* Structure of each line of images */
+  display: flex; 
+  align-items: center; 
+  padding-left: 10px;
+  justify-content:center;
+  flex-direction:row;
+}
+
+.xl-image { /* Image formatting */
+  height: 40vw;
+  width: auto;
+  display: block;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.large-image { /* Image formatting */
+  height: 30vw;
+  width: auto;
+  display: block;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.medium-image { /* Image formatting */
+  height: 22vw;
+  width: auto;
+  display: block;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.small-image { /* Image formatting */
+  height: 15vw;
+  width: auto;
+  display: block;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+footer {
+  text-align: center;
+  padding: 5px;
+  background-color: #53784F;
+  color: white;
+}
+
+.header {
+  padding: 10px;
+  text-align: center;
+  color: white;
+  font-size: 0.5vw;
+  background-image: linear-gradient(#31472E, #53784F);
+}
+
+/*ignore mobile image formatting on desktop*/
+.images-wrap-mobile {
+  display: none;
+}
+
+
+@media only screen and (max-width: 1000px) {
+  p {
+    font-size: 16pt;
+  }
+  
+ul.title-content-list > li {
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Align content to the start of the column */
+  height: auto; /* Let height grow with content */
+  padding: 10px 0; /* Optional: Add spacing between items */
+}
+
+ul.title-content-list > li > .title { /* homepage link formatting*/
+  font-size: 70px;
+}
+
+ul.title-content-list > li > .content { /* other link formatting*/
+  font-size: 45px;
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Align content to the start of the column */
+}
+
+.images-wrap {
+  display: flex; 
+  align-items: center; 
+  justify-content:center;
+  flex-direction:column;
+}
+
+.xl-image {
+  height: auto;
+  width: 80vw;
+  display: block;
+  transition: .5s ease;
+  backface-visibility: hidden;
+   padding-bottom: 45px;
+}
+
+.large-image {
+ height: auto;
+  width: 80vw;
+  display: block;
+  transition: .5s ease;
+  backface-visibility: hidden;
+   padding-bottom: 45px;
+}
+
+.medium-image {
+  height: auto;
+  width: 80vw;
+  display: block;
+  transition: .5s ease;
+  backface-visibility: hidden;
+   padding-bottom: 45px;
+}
+
+.small-image {
+  height: auto;
+  width: 80vw;
+  display: block;
+  transition: .5s ease;
+  backface-visibility: hidden;
+   padding-bottom: 45px;
+}
+
+.text { /* Font size for titles of pictures */
+  background-color: #3F683B;
+  color: white;
+  font-size: 45px;
+  padding: 16px 32px;
+}
+
+  .mobile-break { 
+     display: block;
+   margin: 10px 0;
+  }
+
+    .mobile-remove-break { 
+     display: none;
+  }
+
+.xl-image {
+  height: 30vw;
+  width: auto;
+  display: block;
+  transition: .5s ease;
+  backface-visibility: hidden;
+   padding-bottom: 45px;
+}
+
+.large-image {
+ height: 30vw;
+  width: auto;
+  display: block;
+  transition: .5s ease;
+  backface-visibility: hidden;
+   padding-bottom: 45px;
+}
+
+.medium-image {
+  height: 30vw;
+  width: auto;
+  display: block;
+  transition: .5s ease;
+  backface-visibility: hidden;
+   padding-bottom: 45px;
+}
+
+.small-image {
+  height: 30vw;
+  width: auto;
+  display: block;
+  transition: .5s ease;
+  backface-visibility: hidden;
+   padding-bottom: 45px;
+}
+
+.images-wrap{
+  display: none;
+}
+
+.images-wrap-mobile {
+  display: flex; 
+  align-items: center; 
+  justify-content:center;
+  flex-direction:row;
+  flex-wrap: wrap;
+  gap:10px;
+}
+  
+} /*End of mobile formatting */
+
+  
