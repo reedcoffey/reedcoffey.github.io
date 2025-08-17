@@ -95,6 +95,7 @@
 /* Dot container always at bottom */
 .dots-container {
   text-align: center;
+  margin-top: 20w;
 }
 
 .active, .dot:hover {
@@ -128,14 +129,14 @@
 
   .slideshow-container {
     max-width: 95vw;
-    max-height: 100vw;
+    max-height: 90vw;
     margin-top: 35vw;
   }
 
   .prev, .next {
     cursor: pointer;
-    position: absolute;
-    top: 50%;
+    position: fixed;
+    top: 40%;
     width: auto;
     margin-top: 0;
     padding: 16px;

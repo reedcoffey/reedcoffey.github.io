@@ -219,6 +219,10 @@ ul.title-content-list > li > .content { /* other link formatting*/
   cursor: pointer;
 }
 
+.mobile-break { 
+     display: none;
+  }
+
 
 /* Desktop specific */
 @media only screen and (min-width: 1000px) {
@@ -295,7 +299,7 @@ ul.title-content-list > li > .content { /* other link formatting*/
 }
 
 .large-image {
- height: 40vw;
+ height: 35vw;
   width: 2auto;
   display: block;
   transition: .5s ease;
@@ -338,7 +342,7 @@ ul.title-content-list > li > .content { /* other link formatting*/
 
   .mobile-break { 
      display: block;
-   margin: 10px 0;
+   margin: 30px 0;
   }
 
     .mobile-remove-break { 
