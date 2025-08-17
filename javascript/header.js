@@ -32,6 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="topnav">
         <a href="index.html" class="active" style="font-size:50px">RC Art</a>
         <div id="myLinks" style="display:none;">
+          <a href="oilnav.html">Oil Paintings</a>
           <a href="recent_work.html">Recent Work</a>
           <a href="agaves.html">Agave Studies</a>
           <a href="explorations.html">Explorations</a>

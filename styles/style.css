@@ -324,7 +324,7 @@ ul.title-content-list > li > .content { /* other link formatting*/
 /* Info on hover */
 
 .text { /* Font size for titles of pictures */
-  background-color: #3F683B;
+  background-color: #53784F;
   color: white;
   font-size: 45px;
   padding: 16px 32px;
@@ -350,7 +350,7 @@ ul.title-content-list > li > .content { /* other link formatting*/
 * Style the navigation menu */
 .topnav {
   overflow: hidden;
-  background-color: #3F683B;
+  background-color: #53784F;
   position: relative;
 }
 
@@ -370,12 +370,12 @@ ul.title-content-list > li > .content { /* other link formatting*/
   text-decoration: none;
   font-size: 45pt;
   display: block;
-  background: #3F683B;
+  background: #53784F;
 }
 
 /* Style the hamburger menu */
 .topnav a.icon {
-  background: #3F683B;
+  background: #53784F;
   display: block;
   position: absolute;
   right: 0;
@@ -384,7 +384,7 @@ ul.title-content-list > li > .content { /* other link formatting*/
 
 /* Style the active link (or home/logo) */
 .active {
-  background-color: #3F683B;
+  background-color: #53784F;
   color: white;
 }
   

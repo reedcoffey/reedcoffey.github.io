@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: #f0f0f0;
+}
+
+.images-wrap-consistent {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.justified-grid-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.gallery-item {
+  overflow: hidden;
+  margin: 0; /* adjust for spacing if needed */
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
