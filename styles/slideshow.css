@@ -95,7 +95,6 @@
 /* Dot container always at bottom */
 .dots-container {
   text-align: center;
-  margin-top: 250px;
 }
 
 .active, .dot:hover {

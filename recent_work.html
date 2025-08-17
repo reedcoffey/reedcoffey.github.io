@@ -5,8 +5,6 @@
 <link href="../styles/dropdown.css" rel="stylesheet" type="text/css" media="all">
 <link href="../styles/slideshow.css" rel="stylesheet" type="text/css" media="all">
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="../javascript/oilnavimages.js"></script>
-
 <style>
 
 .container {
@@ -22,8 +20,6 @@
   padding-bottom: 1vw;
 }
 
-
-
 </style>
 </head>
 
@@ -34,8 +30,7 @@
 <script src="javascript/header.js"></script>
 <script src="javascript/hamburger.js"></script>
 
-
-<br class="colorblock-mobile-spacer">
+<br class="mobile-break">
 
 <!-- Slideshow chunk -->
 
@@ -43,9 +38,6 @@
   <div class="slideshow-container">
     <a class="prev" onclick="plusSlides(-1)">❮</a>
     <a class="next" onclick="plusSlides(1)">❯</a>
-
-    <!-- Inner container for vertical centering -->
-    <div class="slideshow-inner"></div>
   </div>
 
   <div class="dots-container"></div>
@@ -119,7 +111,7 @@ $.getJSON("image_manifests/recent_work.json", function(files) {
 
         $("#gallery").append(`
             <div class="container">
-                <img src="/images/${file.src}" alt="${title}" class="medium-image" style="padding-top:10px">
+                <img src="/images/${file.src}" alt="${title}" class="large-image" style="padding-top:10px">
                 <div class="middle">
                     <div class="text">${title}<br>${size}<br>${medium}</div>
                 </div>
