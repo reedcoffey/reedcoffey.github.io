@@ -13,7 +13,7 @@ p{
   transition: .5s ease;
   backface-visibility: hidden;
   padding-bottom: 2vw;
-  padding-top: 2vw;
+  padding-top: 55px;
 }
 
 .fp-image {
@@ -160,7 +160,7 @@ h3 {text-align: center;}
   display: absolute;
   transition: .5s ease;
   backface-visibility: hidden;
-  padding-top: 0;
+  padding-top: 55px;
   padding-bottom: 0;
   }
 

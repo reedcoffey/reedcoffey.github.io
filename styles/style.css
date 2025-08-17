@@ -350,7 +350,7 @@ ul.title-content-list > li > .content { /* other link formatting*/
 * Style the navigation menu */
 .topnav {
   overflow: hidden;
-  background-color: #333;
+  background-color: #3F683B;
   position: relative;
 }
 
@@ -368,14 +368,14 @@ ul.title-content-list > li > .content { /* other link formatting*/
   color: white;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 45pt;
   display: block;
-  background: #3F683B
+  background: #3F683B;
 }
 
 /* Style the hamburger menu */
 .topnav a.icon {
-  background: #3F683Bk;
+  background: #3F683B;
   display: block;
   position: absolute;
   right: 0;
@@ -384,10 +384,14 @@ ul.title-content-list > li > .content { /* other link formatting*/
 
 /* Style the active link (or home/logo) */
 .active {
-  background-color: 3F683B;
+  background-color: #3F683B;
   color: white;
 }
   
+.main-content img {
+  display: block;
+  margin-top: -5px; /* adjust slightly to remove gap */
+}
 } /*End of mobile formatting */
 
   
