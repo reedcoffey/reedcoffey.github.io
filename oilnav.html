@@ -5,7 +5,7 @@
 <link href="../styles/dropdown.css" rel="stylesheet" type="text/css" media="all">
 <link href="../styles/navgallery.css" rel="stylesheet" type="text/css" media="all">
 <style>
-
+/* Container and general layout */
 .container {
   position: relative;
   display: inline-block;
@@ -20,41 +20,44 @@
 }
 
 .large-image {
-max-height: 40vw;
-width: auto;
-margin: 0;
+  max-height: 40vw;
+  width: auto;
+  margin: 0;
 }
 
-images-wrap-consistent {
+/* Image wrapper for consistent row behavior */
+.images-wrap-consistent {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap; /* force single row */
   width: 100vw;
   margin: 0;
   padding: 0;
+  overflow-x: auto; /* optional: scroll if too wide */
 }
 
+/* Justified grid gallery */
 .justified-grid-gallery {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap; /* single row */
   margin: 0;
   padding: 0;
 }
 
 .justified-grid-gallery > * {
-  flex: 1 0 auto; /* Grow to fill row, do not shrink below intrinsic size */
-  height: 50vw;  /* Consistent row height */
-  margin: 0;      /* Remove any gaps */
+  flex: 0 0 auto;      /* do not shrink below intrinsic size */
+  height: 40vw;        /* consistent row height */
+  margin: 0;           /* remove gaps */
   position: relative;
 }
 
 .justified-grid-gallery > * > img {
-  width: 100%;
   height: 100%;
-  object-fit: cover; /* Fill the box without distortion */
+  width: auto;          /* maintain aspect ratio */
   display: block;
-
+  object-fit: cover;    /* fill box without distortion */
 }
+
 </style>
 </head>
 <body>
@@ -65,46 +68,29 @@ images-wrap-consistent {
 
 
  <!-- Recent Work --> 
-<div class="colorblock" style="padding-top: 100px;">
-    <p style="font-size: 1.5vw; color: white; text-align: center;">
-        Recent Work
-    </p>
-</div>
 
-<div class="images-wrap-consistent justified-grid-gallery" style="padding-top: 50px;">
-  <div class="gallery-item"><img src="../images/Petrichor.jpg" alt="Sample 1"></div>
-  <div class="gallery-item"><img src="../images/Missed_Turn.jpg" alt="Sample 2"></div>
-  <div class="gallery-item"><img src="/images/Reclamation.jpg" alt="Sample 3"></div>
+<div class="images-wrap-consistent justified-grid-gallery" style="padding-top: 50px; padding-bottom: 50px;">
+    <div class="gallery-item"><img src="../images/Petrichor.jpg" alt="Sample 1"></div>
+    <div class="gallery-item"><img src="../images/Missed_Turn.jpg" alt="Sample 2"></div>
+    <div class="gallery-item"><img src="/images/Reclamation.jpg" alt="Sample 3"></div>
 </div>
 
 <script src="justified-gallery.js"></script>
 <script>
-window.addEventListener("load", () => {
-  justifyGallery(".justified-grid-gallery", 200, 2);
-});
+  window.addEventListener("load", () => {
+    justifyGallery(".justified-grid-gallery", 200, 2);
+  });
 </script>
 
-<br>
- 
-
-</div>
-
-<div class="link-button-corners">
-<p style="font-size: 1.5vw; color: white; text-align: center;">
+<div class="link-button-corners" style="width:60vw; height: 15vw;">
+<p style="font-size: 30pt; color: white; text-align: center;">
 <a href="recent_work.html">View Recent Work</a>
 </p>
 </div>
 
-<br>
-
  <!-- Recent Work --> 
-<div class="colorblock">
-    <p style="font-size: 1.5vw; color: white; text-align: center;">
-    Agave Studies
-    </p>
-</div>
 
-<div class="images-wrap-consistent justified-grid-gallery" style="padding-top: 50px;">
+<div class="images-wrap-consistent justified-grid-gallery" style="padding-top: 50px; padding-bottom: 50px;">
   <div class="gallery-item"><img src="../images/Lophantha.jpg" alt="Sample 1"></div>
   <div class="gallery-item"><img src="../images/Parryi_I.jpg" alt="Sample 2"></div>
   <div class="gallery-item"><img src="/images/Imposter.jpg" alt="Sample 3"></div>
@@ -116,27 +102,26 @@ window.addEventListener("load", () => {
   justifyGallery(".justified-grid-gallery", 200, 2);
 });
 </script>
-
 </div>
 
-<div class="link-button-corners">
-<p style="font-size: 1.5vw; color: white; text-align: center;">
+<div class="ignore-on-mobile">
+<div class="link-button-corners" style="width: 30vw;">
+<p style="font-size: 1.5vw; color: white; text-align: center; ">
 <a href="agaves.html">View Agave Studies</a>
 </p>
 </div>
-
-<br>
-
- <!-- Explorations --> 
-<div class="colorblock">
-    <p style="font-size: 1.5vw; color: white; text-align: center;">
-    Recent Work
-    </p>
 </div>
 
+<div class="ignore-on-desktop">
+<div class="link-button-corners" style="width:60vw; height: 15vw;">
+<p style="font-size: 30pt; color: white; text-align: center;">
+<a href="agaves.html">View Agave Studies</a>
+</p>
+</div>
+</div>
+ <!-- Explorations --> 
 
-
-<div class="images-wrap-consistent justified-grid-gallery" style="padding-top: 50px;">
+<div class="images-wrap-consistent justified-grid-gallery" style="padding-top: 50px; padding-bottom: 50px;">
   <div class="gallery-item"><img src="../images/Eclipsed_Expectations.jpg" alt="Sample 1"></div>
   <div class="gallery-item"><img src="../images/Nightscape_I.jpg" alt="Sample 2"></div>
   <div class="gallery-item"><img src="/images/Technicolor_Dreamskull.jpg" alt="Sample 3"></div>
@@ -144,8 +129,8 @@ window.addEventListener("load", () => {
 
 </div>
 
-<div class="link-button-corners">
-<p style="font-size: 1.5vw; color: white; text-align: center;">
+<div class="link-button-corners" style="width:60vw; height: 15vw;">
+<p style="font-size: 30pt; color: white; text-align: center;">
 <a href="explorations.html">View Explorations</a>
 </p>
 </div>

@@ -1,25 +1,27 @@
-// Optional JS if you want to dynamically adjust image widths to better fill each row
-function scaleResponsiveGallery(containerSelector) {
+// JS to scale images in .justified-grid-gallery while maintaining aspect ratio
+function scaleResponsiveGallery(containerSelector, targetHeight = 200) {
   const container = document.querySelector(containerSelector);
   if (!container) return;
 
   function resizeImages() {
     const items = Array.from(container.children);
-    let rowWidth = container.clientWidth;
-    let totalRatio = items.reduce((sum, item) => {
-      const img = item.querySelector('img');
-      return sum + img.naturalWidth / img.naturalHeight;
-    }, 0);
-
     items.forEach(item => {
       const img = item.querySelector('img');
+      if (!img.complete) return; // skip if image not loaded yet
       const ratio = img.naturalWidth / img.naturalHeight;
-      img.style.width = `${(rowWidth / totalRatio) * ratio}px`;
+      img.style.height = `${targetHeight}px`;
+      img.style.width = `${targetHeight * ratio}px`;
+      img.style.display = 'block';
     });
   }
 
-  window.addEventListener('resize', resizeImages);
   window.addEventListener('load', resizeImages);
+  window.addEventListener('resize', resizeImages);
+
+  container.querySelectorAll('img').forEach(img => {
+    img.addEventListener('load', resizeImages);
+  });
 }
 
-scaleResponsiveGallery('.responsive-gallery');
+// Apply to your gallery
+scaleResponsiveGallery('.justified-grid-gallery', 40 * window.innerWidth / 100); // 40vw row height
