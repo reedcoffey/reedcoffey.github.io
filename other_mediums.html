@@ -3,6 +3,8 @@
 <head>
 <link href="../styles/style.css" rel="stylesheet" type="text/css" media="all">
 <link href="../styles/dropdown.css" rel="stylesheet" type="text/css" media="all">
+<link href="../styles/slideshow.css" rel="stylesheet" type="text/css" media="all">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <style>
 
 .container {
@@ -17,188 +19,110 @@
   padding-top: 1vw;
   padding-bottom: 1vw;
 }
+
 </style>
 </head>
+
 <body>
+
 
 <!-- Link bar -->
 <script src="javascript/header.js"></script>
 <script src="javascript/hamburger.js"></script>
-<br>
-  
- <!-- Many images --> 
-<div class="colorblock">
-<p style="font-size: 1.5vw; color: white; text-align: center;">
-Murals
-</p>
-</div>
 
-<br>
-  
-<div class="images-wrap">
-  <div class="container">
-    <img src="../images/Poppies_Mural.jpg" alt="A green and white mural showing California poppies in the negative" class="large-image">
-    <div class="middle">
-      <div class="text">California Poppies Mural<br> 3'4"x6'5" <br> House paint </div>
-    </div>
+<br class="mobile-break">
+
+<!-- Slideshow chunk -->
+
+<div class="slideshow-wrapper">
+  <div class="slideshow-container">
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
   </div>
-  
-    <div class="container">
-    <img src="../images/Mountains_Mural.jpg" alt="A green and white mural showing California poppies in the negative" class="large-image">
-    <div class="middle">
-      <div class="text">Catalinas Mural <br> 3'4"x6'5" <br> House paint </div>
-    </div>
-  </div>
+<br class="mobile-break">
+<br class="mobile-break">
+<br class="mobile-break">
+  <div class="dots-container"></div>
 </div>
 
-<br>
+<script>
+let slideIndex = 1;
 
-<div class="images-wrap">
-  <div class="container">
-    <img src="../images/Monstera_Mural.jpg" alt="A green and white mural showing California poppies in the negative" class="large-image">
-    <div class="middle">
-      <div class="text">Inspired by CorDesignStudio's Wallpaper <br> 3'4"x6'5" <br> House paint </div>
-    </div>
-  </div>
-</div>
-  
-  <br>
-  <br>
-<div class="colorblock">
-<p style="font-size: 1.5vw; color: white; text-align: center;">
-Pyrography
-</p>
-</div>
+$.getJSON("image_manifests/other_mediums.json", function(files) {
+    const container = $(".slideshow-container");
+    const dotsContainer = $(".dots-container");
 
-<br>
-<br>
- 
-  <div class="images-wrap">
-  <div class="container">
-    <img src="../images/Berries_1.jpg" alt="Pyrography and watercolor of bright red berries and stylized blue through red leaves" class="medium-image">
-    <div class="middle">
-      <div class="text">Morphology I <br> 5.5"x5.5" <br> Pyrography pen and watercolor on wood panel
-      </div>
-    </div>
-  </div> 
-  
-  <div class="container">
-    <img src="../images/Berries_2.jpg" alt="Pyrography and watercolor of Red, organge, and yellow berries on a branch" class="medium-image">
-    <div class="middle">
-      <div class="text">Morphology II <br> 5.5"x5.5" <br> Pyrography pen and watercolor on wood panel
-      </div>
-    </div>
-  </div> 
-  
-  <div class="container">
-    <img src="../images/Berries_3.jpg" alt="Pyrography and watercolor of Red, organge, and yellow berries on a branch" class="medium-image">
-    <div class="middle">
-      <div class="text">Morphology III <br> 5.5"x5.5" <br> Pyrography pen and watercolor on wood panel
-      </div>
-    </div>
-  </div> 
-</div>
-  
-  <br>
-  
-  <div class="images-wrap">
-  <div class="container">
-    <img src="../images/Berries_4.jpg" alt="Pyrography and watercolor of bright red berries and stylized blue through red leaves" class="medium-image">
-    <div class="middle">
-      <div class="text">Morphology IV <br> 5.5"x5.5" <br> Pyrography pen and watercolor on wood panel
-      </div>
-    </div>
-  </div> 
-  
-  <div class="container">
-    <img src="../images/Berries_5.jpg" alt="Pyrography and watercolor of Red, organge, and yellow berries on a branch" class="medium-image">
-    <div class="middle">
-      <div class="text">Morphology V <br> 5.5"x5.5" <br> Pyrography pen and watercolor on wood panel
-      </div>
-    </div>
-  </div> 
-  
-  <div class="container">
-    <img src="../images/Berries_6.jpg" alt="Pyrography and watercolor of Red, organge, and yellow berries on a branch" class="medium-image">
-    <div class="middle">
-      <div class="text">Morphology VI <br> 5.5"x5.5" <br> Pyrography pen and watercolor on wood panel
-      </div>
-    </div>
-  </div> 
-</div>
+    files.forEach((file, index) => {
+        const caption = `${file.title} <br> ${file.size} <br> ${file.medium}`;
 
-<br>
-  
-<div class="images-wrap">
-  <div class="container">
-    <img src="../images/Berries_7.jpg" alt="Pyrography and watercolor of bright red berries and stylized blue through red leaves" class="medium-image">
-    <div class="middle">
-      <div class="text">Morphology VII <br> 5.5"x5.5" <br> Pyrography pen and watercolor on wood panel
-      </div>
-    </div>
-  </div> 
-  
-  <div class="container">
-    <img src="../images/Berries_8.jpg" alt="Pyrography and watercolor of Red, organge, and yellow berries on a branch" class="medium-image">
-    <div class="middle">
-      <div class="text">Morphology VIII <br> 5.5"x5.5" <br> Pyrography pen and watercolor on wood panel
-      </div>
-    </div>
-  </div> 
-  
-  <div class="container">
-    <img src="../images/Berries_9.jpg" alt="Pyrography and watercolor of Red, organge, and yellow berries on a branch" class="medium-image">
-    <div class="middle">
-      <div class="text">Morphology IX <br> 5.5"x5.5" <br> Pyrography pen and watercolor on wood panel
-      </div>
-    </div>
-  </div> 
-</div>
+        // Add slide
+        container.append(`
+            <div class="mySlides fade">
+                <img src="/images/${file.src}" class="ss-image" alt="${file.title}">
+                <div class="text">${caption}</div>
+            </div>
+        `);
 
-<br>
+        // Add corresponding dot
+        dotsContainer.append(`<span class="dot" onclick="currentSlide(${index+1})"></span>`);
+    });
 
-<div class="images-wrap">
- <div class="container">
-    <img src="../images/Pyrography_poppies.jpg" alt="Pyrography and watercolor of California poppies" class="large-image">
-    <div class="middle">
-      <div class="text">California Poppies <br> 7"x7" <br> Pyrography pen and watercolor on wood panel
-      </div>
-    </div>
-  </div> 
-</div>
+    // Show first slide
+    showSlides(slideIndex);
+});
 
-<br>
-<br>
-<div class="colorblock">
-<p style="font-size: 1.5vw; color: white; text-align: center;">
-Small Woodcrafts
-</p>
-</div>
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
 
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (slides.length === 0) return;
+
+  if (n > slides.length) { slideIndex = 1 }
+  if (n < 1) { slideIndex = slides.length }
+
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (let i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
 <br>
-<br>
-  
-  
-   <div class="images-wrap">
-   <div class="container">
-    <img src="../images/Coasters.jpg" alt="Hexagonal coasters with cutouts in the center, filled with resin and pressed flowers" class="large-image">
-    <div class="middle">
-      <div class="text">Coasters<br> 4"x4" <br> Wood, resin, pressed flowers
-      </div>
-    </div>
-  </div> 
-  
-  <div class="container">
-    <img src="../images/Sunglasses_Holder.jpg" alt="Wood" class="large-image">
-    <div class="middle">
-      <div class="text">Sunglasses Holder<br> 4"x4" <br> Wood, resin, pressed flowers
-      </div>
-    </div>
-  </div> 
-  </div>
-  
-  <br><br>
+<!-- Gallery -->
+<div id="gallery" style="display: flex; flex-wrap: wrap; justify-content: center;"></div>
+
+<script>
+$.getJSON("image_manifests/other_mediums.json", function(files) {
+    files.forEach(function(file) {
+        const title = file.title || "Unknown";
+        const size = file.size || "";
+        const medium = file.medium || "";
+
+        $("#gallery").append(`
+            <div class="container">
+                <img src="/images/${file.src}" alt="${title}" class="large-image" style="padding-top:10px">
+                <div class="middle">
+                    <div class="text">${title}<br>${size}<br>${medium}</div>
+                </div>
+            </div>
+        `);
+    });
+});
+</script>
+
+<br >
+
 <script src="javascript/footer.js"></script>
 
-</html>
-  
+</body>
