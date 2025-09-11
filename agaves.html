@@ -46,7 +46,6 @@
 <br class="mobile-break">
 <br class="mobile-break">
 <br class="mobile-break">
-  <div class="dots-container"></div>
 </div>
 
 <script>
@@ -64,6 +63,7 @@ $.getJSON("image_manifests/agaves.json", function(files) {
             <div class="mySlides fade">
                 <img src="/images/${file.src}" class="ss-image" alt="${file.title}">
                 <div class="text">${caption}</div>
+                <div class="dots-container"></div>
             </div>
         `);
 
@@ -103,6 +103,8 @@ function showSlides(n) {
 }
 </script>
 <br>
+
+
 <!-- Gallery -->
 <div id="gallery" style="display: flex; flex-wrap: wrap; justify-content: center;"></div>
 
