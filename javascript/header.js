@@ -35,7 +35,6 @@ document.addEventListener("DOMContentLoaded", () => {
           <a href="agaves.html">Agave Studies</a>
           <a href="explorations.html">Explorations</a>
           <a href="other_mediums.html">Other Mediums</a>
-          <a href="test.html">Test</a>
         </div>
         <a href="javascript:void(0);" class="icon" id="hamburger-toggle">
           <i class="fa fa-bars"></i>
