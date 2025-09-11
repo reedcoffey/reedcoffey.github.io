@@ -1,8 +1,7 @@
 * {box-sizing:border-box}
 
 .slideshow-container {
-  max-width: 75vw;
-  max-height: 80vh; /* adjust for viewport height */
+  max-width: 85vw;
   position: relative;
   margin: auto;
   display: flex;
@@ -15,7 +14,6 @@
   flex: 1;                     /* fills remaining height */
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;          /* vertical centering of image */
   width: 100%;
 }
@@ -118,18 +116,21 @@
   object-fit: contain;
 }
 
-
-
-
 /* Mobile slideshow formatting */
 
 @media only screen and (max-width: 1000px) {
 
+
   .slideshow-container {
-    max-width: 80vw;
-    max-height: 90vw;
-    margin-top: 35vw;
-  }
+  max-width: 750vw;
+  max-height: 90vh; /* adjust for viewport height */
+  position: relative;
+  margin: auto;
+  display: flex;
+  flex-direction: column;       /* stack images and dots */
+  justify-content: center;      /* vertical centering of image */
+  align-items: center;          /* horizontal centering */
+}
 
   .prev, .next {
     cursor: pointer;

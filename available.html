@@ -4,8 +4,8 @@
 <link href="../styles/style.css" rel="stylesheet" type="text/css" media="all">
 <link href="../styles/dropdown.css" rel="stylesheet" type="text/css" media="all">
 <link href="../styles/slideshow.css" rel="stylesheet" type="text/css" media="all">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <style>
-
 
 .container {
   position: relative;
@@ -20,105 +20,60 @@
   padding-bottom: 1vw;
 }
 
-
 </style>
 </head>
 
-
 <body>
+
 
 <!-- Link bar -->
 <script src="javascript/header.js"></script>
 <script src="javascript/hamburger.js"></script>
-  
+
+<br class="mobile-break">
+
+<div class="ignore-on-mobile">
 <br>
+</div>
 
 <!-- Slideshow chunk -->
 
-<div class="slideshow-container">
-
+<div class="slideshow-wrapper">
+  <div class="slideshow-container">
     <a class="prev" onclick="plusSlides(-1)">❮</a>
-
-<div class="mySlides fade">
-  <div class="numbertext">1 / 9</div>
-  <img src="../images/Missed_Turn.jpg" class="ss-image">
-  <div class="text">Missed Turn<br>Oil on canvas<br>24"x36"<br> $650</div>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">1 / 9</div>
-  <img src="../images/Aster.jpg" class="ss-image">
-  <div class="text">Aster <br>Oil on canvas<br> $70</div>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">2 / 9</div>
-  <img src="../images/Technicolor_Dreamskull.jpg" class="ss-image">
-  <div class="text">Technicolor Dreamskull <br>Oil on canvas<br> $80</div>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">3 / 9</div>
-  <img src="../images/Sketch_1.jpg" class="ss-image">
-  <div class="text">Sketch I <br><br> $35</div>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">4 / 9</div>
-  <img src="../images/Sketch_2.jpg" class="ss-image">
-  <div class="text">Sketch II <br><br> $35</div>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">5 / 9</div>
-  <img src="../images/Coral_Bean.jpg" class="ss-image">
-  <div class="text">Coral Bean <br><br> $35</div>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">6 / 9</div>
-  <img src="../images/BAER_I.jpg" style="height:60vw">
-  <div class="text">BAER I</div>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">7 / 9</div>
-  <img src="../images/BAER_II.jpg" style="height:60vw">
-  <div class="text">BAER II</div>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">8 / 9</div>
-  <img src="../images/Berberis_fremontii.jpg" style="height:60vw">
-  <div class="text">Berberis fremontii</div>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">9 / 9</div>
-  <img src="../images/My_Honey.jpg" style="height:60vw">
-  <div class="text">My Honey</div>
-</div>
-
-
-<a class="next" onclick="plusSlides(1)">❯</a>
-
-</div>
-
-<div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1)"></span> 
-  <span class="dot" onclick="currentSlide(2)"></span> 
-  <span class="dot" onclick="currentSlide(3)"></span> 
-  <span class="dot" onclick="currentSlide(4)"></span> 
-  <span class="dot" onclick="currentSlide(5)"></span> 
-  <span class="dot" onclick="currentSlide(6)"></span>
-  <span class="dot" onclick="currentSlide(7)"></span>
-  <span class="dot" onclick="currentSlide(8)"></span>
-  <span class="dot" onclick="currentSlide(9)"></span>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+  </div>
+<br class="mobile-break">
+<br class="mobile-break">
+<br class="mobile-break">
+  <div class="dots-container"></div>
 </div>
 
 <script>
 let slideIndex = 1;
-showSlides(slideIndex);
+
+$.getJSON("image_manifests/explorations.json", function(files) {
+    const container = $(".slideshow-container");
+    const dotsContainer = $(".dots-container");
+
+    files.forEach((file, index) => {
+        const caption = `${file.title} <br> ${file.size} <br> ${file.medium}`;
+
+        // Add slide
+        container.append(`
+            <div class="mySlides fade">
+                <img src="/images/${file.src}" class="ss-image" alt="${file.title}">
+                <div class="text">${caption}</div>
+            </div>
+        `);
+
+        // Add corresponding dot
+        dotsContainer.append(`<span class="dot" onclick="currentSlide(${index+1})"></span>`);
+    });
+
+    // Show first slide
+    showSlides(slideIndex);
+});
 
 function plusSlides(n) {
   showSlides(slideIndex += n);
@@ -129,126 +84,49 @@ function currentSlide(n) {
 }
 
 function showSlides(n) {
-  let i;
   let slides = document.getElementsByClassName("mySlides");
   let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
+  if (slides.length === 0) return;
+
+  if (n > slides.length) { slideIndex = 1 }
+  if (n < 1) { slideIndex = slides.length }
+
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
   }
-  for (i = 0; i < dots.length; i++) {
+  for (let i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
-  slides[slideIndex-1].style.display = "block";  
+
+  slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
 </script>
-
-<!-- Images chunk -->
-
 <br>
+<!-- Gallery -->
+<div id="gallery" style="display: flex; flex-wrap: wrap; justify-content: center;"></div>
 
-<div class="colorblock">
-<p style="font-size: 1.5vw; color: white; text-align: center;">
-Explorations
-</p>
-</div>
+<script>
+$.getJSON("image_manifests/explorations.json", function(files) {
+    files.forEach(function(file) {
+        const title = file.title || "Unknown";
+        const size = file.size || "";
+        const medium = file.medium || "";
 
-<br>
+        $("#gallery").append(`
+            <div class="container">
+                <img src="/images/${file.src}" alt="${title}" class="large-image" style="padding-top:10px">
+                <div class="middle">
+                    <div class="text">${title}<br>${size}<br>${medium}</div>
+                </div>
+            </div>
+        `);
+    });
+});
+</script>
 
-<div class="images-wrap">
-
-    <div class="container">
-    <img src="../images/Missed_Turn.jpg" alt="Oil painting of a boardwalk trail through a forest." class="large-image">
-    <div class="middle">
-      <div class="text">Pathways: Missed Turn <br> 24"x36" <br> Oil on canvas</div>
-    </div>
-  </div>
-
-<div class="container">
-    <img src="../images/Aster.jpg" alt="Oil painting of a bright aster of some unknown species against a grassy backdrop." class="large-image">
-    <div class="middle">
-      <div class="text">Aster <br> 24"x36" <br> Oil on canvas</div>
-    </div>
-  </div>
-  
-  <div class="container">
-  <img src="../images/Technicolor_Dreamskull.jpg" alt="An image of a brightly colored skull." class="large-image">
-  <div class="middle">
-    <div class="text">Technicolor Dreamskull <br> 24"x36" <br> Oil on canvas</div>
-  </div>
-</div>
-</div>
-
-<br>
-
-<div class="images-wrap">
-  <div class="container">
-    <img src="../images/Sketch_1.jpg" alt="Oil painting of a Blue Glow agave." class="large-image">
-    <div class="middle">
-      <div class="text">Sketch I<br> 24"x36" <br> Oil on canvas</div>
-    </div>
-  </div>
-
-  <div class="container">
-    <img src="../images/Sketch_2.jpg" alt="Bees curled up in a flower" class="large-image">
-    <div class="middle">
-      <div class="text">Sketch II <br> 24"x36" <br> Oil on canvas</div>
-    </div>
-  </div>
- 
-  <div class="container">
-    <img src="../images/Coral_Bean.jpg" alt="Nightscape I" class="large-image">
-    <div class="middle">
-      <div class="text">Coral Bean <br> 24"x36" <br> Oil on canvas</div>
-    </div>
-  </div>
-  
-</div>
- 
-  <br>
-<br>
-
-<div class="images-wrap">
-  <div class="container">
-    <img src="../images/BAER_I.jpg" alt="Nightscape I" class="medium-image">
-    <div class="middle">
-      <div class="text">BAER I <br> 24"x36" <br> Oil on canvas</div>
-    </div>
-  </div>
-
-  <div class="container">
-    <img src="../images/BAER_II.jpg" alt="Nightscape I" class="medium-image">
-    <div class="middle">
-      <div class="text">BAER II <br> 24"x36" <br> Oil on canvas</div>
-    </div>
-  </div>
-  
-
-</div>
-
-<br>
-
-<div class="images-wrap">
-  <div class="container">
-    <img src="../images/Berberis_fremontii.jpg" alt="Nightscape I" class="large-image">
-    <div class="middle">
-      <div class="text">Berberis fremontii <br> 24"x36" <br> Oil on canvas</div>
-    </div>
-  </div>
-
-<div class="container">
-    <img src="../images/My_Honey.jpg" alt="Bees curled up in a flower" class="large-image">
-    <div class="middle">
-      <div class="text">My Honey <br> 24"x36" <br> Oil on canvas</div>
-    </div>
-  </div>
-
-</div>
-
-<br>
-<br>
+<br >
 
 <script src="javascript/footer.js"></script>
+
 </body>
