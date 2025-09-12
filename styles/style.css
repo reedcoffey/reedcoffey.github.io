@@ -307,15 +307,6 @@ ul.title-content-list > li > .content { /* other link formatting*/
   display: none;
 }
 
-.xl-image {
-  height: auto;
-  width: 80vw;
-  display: block;
-  transition: .5s ease;
-  backface-visibility: hidden;
-   padding-bottom: 45px;
-}
-
 .large-image {
  height: 35vw;
   width: 2auto;

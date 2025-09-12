@@ -1,22 +1,8 @@
-.body {
-font-size: 1.25vw;
-}
-
 p{
   font-size: 1.25vw;
   }
 
-.aloe-image { /* Image formatting */
-  height: auto;
-  width: 100vw;
-  display: block;
-  transition: .5s ease;
-  backface-visibility: hidden;
-  padding-bottom: 2vw;
-  padding-top: 55px;
-}
-
-.fp-image {
+.fp-image { /* Main image formatting */
   height: auto;
   width: 40vw;
   display: block;
@@ -35,7 +21,7 @@ p{
   backface-visibility: hidden;
 }
 
-.medium-image-index { /* Image formatting */
+.medium-image-index { /* Artist image formatting */
   height: 22vw;
   width: auto;
   display: block;
@@ -100,66 +86,12 @@ h3 {text-align: center;}
 
 @media only screen and (max-width: 1000px) {
 
-
-  .body {
-    font-size: 01vw;
-  }
-
-  .p{
-  font-size: 0vw;
-  }
-
-  .fp-image {
+.fp-image {
   height: 100vw;
   width: auto;
   display: block;
   transition: .5s ease;
   backface-visibility: hidden;
-
-  }
-
-  .bottom-image {
-   height: auto;
-  width: 80vw;
-  display: block;
-  transition: .5s ease;
-  backface-visibility: hidden;
-}
-
-.textborderright {
- border-width:3px;
- border-style:solid;
- border-color:hsl(114, 21%, 39%);
- padding-left: 2vw;
- padding-right: 2vw;
- padding-top: 1vw;
- padding-bottom: 1vw;
- margin-left: 0;
- margin-right: 0;
- background-color: hsl(0, 0%, 100%);
-}
-
-.textborderleft {
- border-width:3px;
- border-style:solid;
- border-color:#53784F;
- padding-left: 2vw;
- padding-right: 2vw;
- padding-top: 1vw;
- padding-bottom: 1vw;
- margin-left: 0;
- margin-right: 0;
- background-color: #53784F;
-}
-
-.aloe-image { /* Image formatting */
-  height: auto;
-  width: 100vw;
-  display: absolute;
-  transition: .5s ease;
-  backface-visibility: hidden;
-  padding-top: 55px;
-  padding-bottom: 0;
   }
 
 .gridwrapper {
@@ -176,7 +108,6 @@ br {
 
 .autoslides-container {
   width: 100vw;
-  max-width: 1000px;
   overflow: hidden;
   margin: 50px auto;
   box-sizing: border-box;
