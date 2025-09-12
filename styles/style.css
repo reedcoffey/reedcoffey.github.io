@@ -11,6 +11,13 @@ body {
   font-size: 10vw;
 }
 
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
 
 /* Text formatting */
 
@@ -276,7 +283,17 @@ ul.title-content-list > li > .content { /* other link formatting*/
   align-items: center; /* Align content to the start of the column */
 }
 
-
+/* Hamburger Navbar */
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+  position: fixed;   /* stays at top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;     /* make sure it’s above images */
+  max-height: 15vw;
+}
 
 /* Images */
 

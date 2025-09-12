@@ -5,7 +5,9 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="header">
         <ul class="title-content-list">
           <li>
-            <div class="title"><a href="https://reedcoffey.github.io/">Reed Coffey Art</a></div>
+             <a href="default.asp">
+  <img src="../images/Logo1.png" alt="HTML tutorial" style="width:auto;height:5vw;margin-bottom:-10%;">
+</a> 
             <div class="content">
               <div class="dropdown">
                 <button class="dropbtn"><a href="oilnav.html">Oil Paintings</a></button>
@@ -26,9 +28,10 @@ document.addEventListener("DOMContentLoaded", () => {
     <div class="ignore-on-desktop">
       <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
       <div class="topnav">
-        <a href="index.html" class="active" style="font-size:50px">RC Art</a>
+         <a href="default.asp">
+           <img src="../images/Logo1.png" alt="HTML tutorial" style="height:10vw;">
+         </a> 
         <div id="myLinks" style="display:none;">
           <a href="oilnav.html">Oil Paintings</a>
           <a href="recent_work.html">Recent Work</a>
