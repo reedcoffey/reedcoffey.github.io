@@ -175,7 +175,7 @@ br {
 /*autoslides*/
 
 .autoslides-container {
-  width: 85vw;
+  width: 100vw;
   max-width: 1000px;
   overflow: hidden;
   margin: 50px auto;
@@ -187,12 +187,12 @@ br {
 
 .autoslides-wrapper {
   display: flex;
-  width: calc(4 * 85vw);
+  width: calc(4 * 100vw);
   animation: slide 16s infinite;
 }
 
 .autoslides-wrapper img {
-  width: 85vw;
+  width: 100vw;
   flex-shrink: 0;
   height: auto;
   display: block;
@@ -203,13 +203,13 @@ br {
     transform: translateX(0);
   }
   30%, 50% {
-    transform: translateX(-85vw);
+    transform: translateX(-100vw);
   }
   55%, 75% {
-    transform: translateX(calc(-85vw * 2));
+    transform: translateX(calc(-100vw * 2));
   }
   80%, 100% {
-    transform: translateX(calc(-85vw * 3));
+    transform: translateX(calc(-100vw * 3));
   }
 }
 
