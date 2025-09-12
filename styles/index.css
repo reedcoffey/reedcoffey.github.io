@@ -119,7 +119,7 @@ br {
 .autoslides-wrapper {
   display: flex;
   width: calc(4 * 100vw);
-  animation: slide 16s infinite;
+  animation: slide 12s infinite;
 }
 
 .autoslides-wrapper img {
