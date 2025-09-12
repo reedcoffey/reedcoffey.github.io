@@ -130,19 +130,19 @@ br {
 }
 
 @keyframes slide {
-  0%, 20% {
+  0%, 18% {
     transform: translateX(0);
   }
-  25%, 45% {
+  23%, 41% {
     transform: translateX(-100vw);
   }
-  50%, 70% {
+  46%, 64% {
     transform: translateX(calc(-100vw * 2));
   }
-  75%, 85% {
+  69%, 87% {
     transform: translateX(calc(-100vw * 3));
   }
-  85%, 100% {
+  100%, 100% {
     transform: translateX(0);
   }
 }
