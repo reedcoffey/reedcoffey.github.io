@@ -139,10 +139,10 @@ br {
   50%, 70% {
     transform: translateX(calc(-100vw * 2));
   }
-  75%, 95% {
+  75%, 85% {
     transform: translateX(calc(-100vw * 3));
   }
-  95%, 100% {
+  85%, 100% {
     transform: translateX(0);
   }
 }
