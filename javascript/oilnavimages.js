@@ -7,7 +7,7 @@ $.getJSON("image_manifests/recent_work.json", function(files) {
 
         $("#gallery").append(`
             <div class="container">
-                <img src="/images/${file.src}" alt="${title}" class="large-image" style="padding-top:10px">
+                <img src="images/${file.src}" alt="${title}" class="large-image" style="padding-top:10px">
                 <div class="middle">
                     <div class="text">${title}<br>${size}<br>${medium}</div>
                 </div>

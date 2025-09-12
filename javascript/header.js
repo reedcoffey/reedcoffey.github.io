@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <ul class="title-content-list">
           <li>
              <a href="index.html">
-  <img src="../images/Logo1.png" alt="HTML tutorial" style="width:auto;height:5vw;margin-bottom:-10%;">
+  <img src="images/Logo1.png" alt="HTML tutorial" style="width:auto;height:5vw;margin-bottom:-10%;">
 </a> 
             <div class="content">
               <div class="dropdown">
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <div class="topnav">
          <a href="index.html">
-           <img src="../images/Logo1.png" alt="HTML tutorial" style="height:10vw;">
+           <img src="images/Logo1.png" alt="HTML tutorial" style="height:10vw;">
          </a> 
         <div id="myLinks" style="display:none;">
           <a href="oilnav.html">Oil Paintings</a>
