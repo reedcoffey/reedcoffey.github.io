@@ -1,17 +1,33 @@
 let imagesData = [];
+let currentIndex = 0;
 
-function myFunction(imgData) {
-  const expandImg = document.getElementById("expandedImg");
-  const imgTitle = document.getElementById("imgTitle");
-  const imgSize = document.getElementById("imgSize");
-  const imgMedium = document.getElementById("imgMedium");
+const expandedImg = document.getElementById("expandedImg");
+const imgTitle = document.getElementById("imgTitle");
+const imgSize = document.getElementById("imgSize");
+const imgMedium = document.getElementById("imgMedium");
+const thumbnailRow = document.getElementById("thumbnailRow");
 
-  expandImg.src = `images/${imgData.src}`;
+function showImage(index) {
+  if (index < 0) index = imagesData.length - 1;
+  if (index >= imagesData.length) index = 0;
+
+  currentIndex = index;
+
+  const imgData = imagesData[index];
+  expandedImg.src = `images/${imgData.src}`;
   imgTitle.textContent = imgData.title;
   imgSize.textContent = imgData.size;
   imgMedium.textContent = imgData.medium;
 
-  expandImg.parentElement.style.display = "block";
+  // Update selected thumbnail highlight
+  Array.from(thumbnailRow.children).forEach((col, i) => {
+    const img = col.querySelector('img');
+    if (i === index) {
+      img.classList.add('selected');
+    } else {
+      img.classList.remove('selected');
+    }
+  });
 }
 
 function loadImagesFromManifest() {
@@ -19,7 +35,6 @@ function loadImagesFromManifest() {
     .then(response => response.json())
     .then(images => {
       imagesData = images;
-      const thumbnailRow = document.getElementById("thumbnailRow");
 
       thumbnailRow.innerHTML = "";
 
@@ -30,19 +45,32 @@ function loadImagesFromManifest() {
         const img = document.createElement("img");
         img.src = `images/${imgData.src}`;
         img.alt = imgData.title;
-        img.onclick = () => myFunction(imgData);
+        img.onclick = () => showImage(index);
 
         column.appendChild(img);
         thumbnailRow.appendChild(column);
-
-        if (index === 0) {
-          myFunction(imgData);
-        }
       });
+
+      // Show first image initially
+      showImage(0);
     })
     .catch(error => {
       console.error("Error loading recent_work.json:", error);
     });
 }
 
-window.onload = loadImagesFromManifest;
+// Left and right click zones for navigation
+document.addEventListener('DOMContentLoaded', () => {
+  loadImagesFromManifest();
+
+  const leftZone = document.querySelector('.left-zone');
+  const rightZone = document.querySelector('.right-zone');
+
+  leftZone.addEventListener('click', () => {
+    showImage(currentIndex - 1);
+  });
+
+  rightZone.addEventListener('click', () => {
+    showImage(currentIndex + 1);
+  });
+});

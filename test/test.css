@@ -4,56 +4,11 @@ body, html {
   height: 100%;
 }
 
-.gallery-wrapper {
-  display: flex;
-  flex-direction: column;
-  height: 100vh; /* Viewport height */
-  overflow: hidden;
-}
-
-.expanded-area {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;  /* vertical centering */
-  align-items: center;      /* horizontal centering */
-  height: 100%;             /* or flex-grow: 1 if inside flex parent */
-  overflow: auto;
-  padding: 20px;
-  box-sizing: border-box;
-  text-align: center;       /* centers inline text inside */
-}
-
-
-#expandedImg {
-  max-width: 100%;         /* fill container width but no overflow */
-  max-height: 70vh;        /* keep it within viewport height */
-  object-fit: contain;     /* preserve aspect ratio, no cropping */
-  display: block;          /* removes inline spacing */
-  margin: 0 auto 15px;     /* centers the image horizontally */
-}
-
-.thumbnail-bar {
-  padding: 10px;
-  background: #f0f0f0;
-  border-top: 1px solid #ccc;
-}
-
 #thumbnailRow {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
-}
-
-.column img {
-  width: auto;
-  height: 100px;
-  cursor: pointer;
-  transition: transform 0.2s;
-}
-
-.column img:hover {
-  transform: scale(1.1);
 }
 
 /* Container for the image caption */
@@ -62,7 +17,7 @@ body, html {
   margin: 10px auto 0 auto; /* top 10px, horizontal auto centers, bottom 0 */
   text-align: center;
   color: #444;
-  font-family: 'Georgia', serif;
+  font-family: 'Helvetica', sans-serif;
 }
 
 /* The title (e.g., artwork name) */
@@ -80,4 +35,98 @@ body, html {
   margin: 2px 0;
   color: #666;
   font-style: italic;
+}
+
+/* Gallery wrapper fills viewport vertically */
+.gallery-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Expanded area grows to fill space, centers content */
+.expanded-area {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertical center */
+  align-items: center;     /* horizontal center */
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: auto;
+  text-align: center;
+}
+
+/* Wrapper for image + click zones */
+.expanded-image-container {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+}
+
+/* Large image styling */
+#expandedImg {
+  max-width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+  display: block;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+/* Left/right invisible click zones */
+.click-zone {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  z-index: 10;
+}
+
+.left-zone {
+  left: 0;
+  cursor: w-resize;
+}
+
+.right-zone {
+  right: 0;
+  cursor: e-resize;
+}
+
+/* Thumbnail bar styling */
+.thumbnail-bar {
+  flex-shrink: 0;
+  padding: 10px 20px;
+  background: #f0f0f0;
+  border-top: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Thumbnails container uses flex wrap */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Each thumbnail container */
+.column {
+  flex: 0 0 auto;
+}
+
+/* Thumbnail images */
+.column img {
+  max-width: 100px;
+  max-height: 70px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border-color 0.3s;
+}
+
+.column img:hover,
+.column img.selected {
+  border-color: #333;
 }

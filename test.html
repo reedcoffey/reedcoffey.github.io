@@ -1,31 +1,30 @@
- 
 <!DOCTYPE html>
 <html>
 <head>
 <link href="test/test.css" rel="stylesheet" type="text/css" media="all">
-
 </head>
 
 <body>
-<body>
   <div class="gallery-wrapper">
-  <div class="expanded-area">
-  
-    <img id="expandedImg" />
-    <div id="imgtext">
-      <h2 id="imgTitle"></h2>
-      <p id="imgSize"></p>
-      <p id="imgMedium"></p>
+    <div class="expanded-area">
+      <div class="expanded-image-container" id="expandedImageContainer">
+        <div class="click-zone left-zone"></div>
+        <img id="expandedImg" />
+        <div class="click-zone right-zone"></div>
+      </div>
+
+      <div id="imgtext">
+        <h2 id="imgTitle"></h2>
+        <p id="imgSize"></p>
+        <p id="imgMedium"></p>
+      </div>
+    </div>
+
+    <div class="thumbnail-bar">
+      <div class="row" id="thumbnailRow"></div>
     </div>
   </div>
 
-  <div class="thumbnail-bar">
-    <div class="row" id="thumbnailRow"></div>
-  </div>
-</div>
+  <script src="test/test.js"></script>
 </body>
-
-
-<script src="test/test.js"></script>
-
-</body>
+</html>
