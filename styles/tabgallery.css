@@ -35,8 +35,6 @@ body, html {
   margin: 2px 0;
   color: #666;
   font-style: italic;
-  margin-top: 10px;
-  padding-top: 10px;
 }
 
 /* Gallery wrapper fills viewport vertically */
@@ -45,6 +43,7 @@ body, html {
   flex-direction: column;
   height: 90vh;
   box-sizing: border-box;
+  padding-top: 5vw;
 }
 
 /* Expanded area grows to fill space, centers content */
