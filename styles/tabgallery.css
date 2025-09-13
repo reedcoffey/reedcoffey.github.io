@@ -14,7 +14,7 @@ body, html {
 /* Container for the image caption */
 #imgtext {
   max-width: 80%;
-  margin: 10px auto 0 auto; /* top 10px, horizontal auto centers, bottom 0 */
+  margin: 10px auto 0 auto;
   text-align: center;
   color: #444;
   font-family: 'Helvetica', sans-serif;
@@ -51,8 +51,8 @@ body, html {
   flex: 1 1 auto;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* vertical center */
-  align-items: center;     /* horizontal center */
+  justify-content: center;
+  align-items: center;
   padding: 20px;
   box-sizing: border-box;
   overflow: auto;
@@ -61,12 +61,13 @@ body, html {
 
 /* Wrapper for image + click zones */
 .expanded-image-container {
-  overflow: hidden; /* Prevent scrollbars */
+  overflow: hidden;
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative; /* Required for absolutely-positioned arrows */
 }
 
 /* Large image styling */
@@ -76,16 +77,19 @@ body, html {
   width: auto;
   height: auto;
   display: block;
-  object-fit: contain; /* Ensures the image scales nicely */
+  object-fit: contain;
 }
 
-/* Left/right invisible click zones */
+/* Click zones */
 .click-zone {
   position: absolute;
   top: 0;
   width: 50%;
   height: 100%;
   z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .left-zone {
@@ -98,6 +102,20 @@ body, html {
   cursor: e-resize;
 }
 
+/* Arrows inside click zones */
+.arrow {
+  font-size: 3rem;
+  color: #53784F);
+  pointer-events: none; /* Allows clicks to pass through to .click-zone */
+  transition: color 0.3s ease, opacity 0.3s ease;
+  opacity: 0.4;
+}
+
+.click-zone:hover .arrow {
+  color: #31472E;
+  opacity: 0.8;
+}
+
 /* Thumbnail bar styling */
 .thumbnail-bar {
   flex-shrink: 0;
@@ -105,22 +123,22 @@ body, html {
   box-sizing: border-box;
 }
 
-/* Thumbnails container uses flex wrap */
+/* Thumbnails container */
 .row {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
-  align-items: center; /* vertically centers flex items (the .column divs) */
+  align-items: center;
 }
 
 /* Each thumbnail container */
 .column {
-  display: flex;         /* make columns flex containers */
-  align-items: center;   /* vertically center content inside columns */
-  justify-content: center; /* center horizontally too if you want */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex: 0 0 auto;
-  height: 15vw;          /* fix height for consistent vertical alignment */
+  height: 15vw;
 }
 
 /* Thumbnail images */
@@ -131,7 +149,7 @@ body, html {
   cursor: pointer;
   border: 2px solid transparent;
   transition: border-color 0.3s;
-  display: block; /* remove inline gap */
+  display: block;
 }
 
 .column img:hover,
@@ -139,34 +157,33 @@ body, html {
   border-color: #333;
 }
 
-
 /* Mobile formatting */
 @media only screen and (max-width: 1000px) {
 
-.gallery-wrapper {
-  display: flex;
-  flex-direction: column;
-  height: 90vh;
-  box-sizing: border-box;
-  padding-top: 5vw;
-}
+  .gallery-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    box-sizing: border-box;
+    padding-top: 5vw;
+  }
 
-/* The title (e.g., artwork name) */
-#imgTitle {
-  font-size: 35pt;
-  font-weight: bold;
-  margin-bottom: 5px;
-  color: #222;
-}
+  #imgTitle {
+    font-size: 35pt;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #222;
+  }
 
-/* The size and medium info */
-#imgSize,
-#imgMedium {
-  font-size: 20pt;
-  margin: 2px 0;
-  color: #666;
-  font-style: italic;
-}
+  #imgSize,
+  #imgMedium {
+    font-size: 20pt;
+    margin: 2px 0;
+    color: #666;
+    font-style: italic;
+  }
 
-
+  .arrow {
+    font-size: 4rem;
+  }
 }
