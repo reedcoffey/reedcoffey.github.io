@@ -4,6 +4,7 @@
 <link href="styles/style.css" rel="stylesheet" type="text/css" media="all">
 <link href="styles/dropdown.css" rel="stylesheet" type="text/css" media="all">
 <link href="styles/slideshow.css" rel="stylesheet" type="text/css" media="all">
+<link href="styles/tabgallery.css" rel="stylesheet" type="text/css" media="all">
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <style>
 
@@ -36,96 +37,28 @@
 <br>
 </div>
 
-<!-- Slideshow chunk -->
-
-<div class="slideshow-wrapper">
-  <div class="slideshow-container">
-    <a class="prev" onclick="plusSlides(-1)">❮</a>
-    <a class="next" onclick="plusSlides(1)">❯</a>
+<div class="gallery-wrapper">
+  <div class="expanded-area">
+    <div class="expanded-image-container" id="expandedImageContainer">
+      <div class="click-zone left-zone"></div>
+      <img id="expandedImg" />
+      <div class="click-zone right-zone"></div>
+    </div>
   </div>
-<br class="mobile-break">
-<br class="mobile-break">
-<br class="mobile-break">
+ <div id="imgtext">
+    <h2 id="imgTitle"></h2>
+    <p id="imgSize"></p>
+    <p id="imgMedium"></p>
+  </div>
+  <br>
+  <div class="thumbnail-bar">
+    <div class="row" id="thumbnailRow"></div>
+  </div>
+  <script src="test/test.js"></script>
+ 
 </div>
 
-<script>
-let slideIndex = 1;
 
-$.getJSON("image_manifests/agaves.json", function(files) {
-    const container = $(".slideshow-container");
-    const dotsContainer = $(".dots-container");
-
-    files.forEach((file, index) => {
-        const caption = `${file.title} <br> ${file.size} <br> ${file.medium}`;
-
-        // Add slide
-        container.append(`
-            <div class="mySlides fade">
-                <img src="images/${file.src}" class="ss-image" alt="${file.title}">
-                <div class="text">${caption}</div>
-                <div class="dots-container"></div>
-            </div>
-        `);
-
-        // Add corresponding dot
-        dotsContainer.append(`<span class="dot" onclick="currentSlide(${index+1})"></span>`);
-    });
-
-    // Show first slide
-    showSlides(slideIndex);
-});
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (slides.length === 0) return;
-
-  if (n > slides.length) { slideIndex = 1 }
-  if (n < 1) { slideIndex = slides.length }
-
-  for (let i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (let i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-}
-</script>
-<br>
-
-
-<!-- Gallery -->
-<div id="gallery" style="display: flex; flex-wrap: wrap; justify-content: center;"></div>
-
-<script>
-$.getJSON("image_manifests/agaves.json", function(files) {
-    files.forEach(function(file) {
-        const title = file.title || "Unknown";
-        const size = file.size || "";
-        const medium = file.medium || "";
-
-        $("#gallery").append(`
-            <div class="container">
-                <img src="images/${file.src}" alt="${title}" class="large-image" style="padding-top:10px">
-                <div class="middle">
-                    <div class="text">${title}<br>${size}<br>${medium}</div>
-                </div>
-            </div>
-        `);
-    });
-});
-</script>
 
 <br >
 

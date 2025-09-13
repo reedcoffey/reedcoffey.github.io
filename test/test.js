@@ -31,7 +31,13 @@ function showImage(index) {
 }
 
 function loadImagesFromManifest() {
-  fetch("image_manifests/recent_work.json")
+  // Get current page name without extension
+  const pagePath = window.location.pathname; // e.g., /folder/page.html
+  const pageName = pagePath.substring(pagePath.lastIndexOf('/') + 1).split('.')[0]; // "page"
+  
+  const manifestFile = `image_manifests/${pageName}.json`;
+
+  fetch(manifestFile)
     .then(response => response.json())
     .then(images => {
       imagesData = images;
@@ -55,9 +61,10 @@ function loadImagesFromManifest() {
       showImage(0);
     })
     .catch(error => {
-      console.error("Error loading recent_work.json:", error);
+      console.error(`Error loading ${manifestFile}:`, error);
     });
 }
+
 
 // Left and right click zones for navigation
 document.addEventListener('DOMContentLoaded', () => {
