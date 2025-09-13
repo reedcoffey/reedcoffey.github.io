@@ -41,7 +41,7 @@ body, html {
 .gallery-wrapper {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 90vh;
   box-sizing: border-box;
 }
 
@@ -140,6 +140,17 @@ body, html {
 
 /* Mobile formatting */
 @media only screen and (max-width: 1000px) {
+
+/* Large image styling */
+#expandedImg {
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+  display: block;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
 /* The title (e.g., artwork name) */
 #imgTitle {
   font-size: 35pt;
