@@ -136,3 +136,24 @@ body, html {
 .column img.selected {
   border-color: #333;
 }
+
+
+/* Mobile formatting */
+@media only screen and (max-width: 1000px) {
+/* The title (e.g., artwork name) */
+#imgTitle {
+  font-size: 35pt;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #222;
+}
+
+/* The size and medium info */
+#imgSize,
+#imgMedium {
+  font-size: 20pt;
+  margin: 2px 0;
+  color: #666;
+  font-style: italic;
+}
+}
