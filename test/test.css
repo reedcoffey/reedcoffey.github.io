@@ -1,49 +1,83 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
-.autoslides-container{
-    width: 85vmin;
-    position: absolute;
-    transform: translate(-50%,-50%);
-    top: 50%;
-    left: 50%;
-    overflow: hidden;
-    box-shadow: 10px 25px 30px rgba(30,30,200,0.3);
+.gallery-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Viewport height */
+  overflow: hidden;
 }
-.autoslides-wrapper{
-    width: 100%;
-    display: flex;
-    animation: slide 16s infinite;
+
+.expanded-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* vertical centering */
+  align-items: center;      /* horizontal centering */
+  height: 100%;             /* or flex-grow: 1 if inside flex parent */
+  overflow: auto;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;       /* centers inline text inside */
 }
-@keyframes slide{
-    0%{
-        transform: translateX(0);
-    }
-    25%{
-        transform: translateX(0);
-    }
-    30%{
-        transform: translateX(-100%);
-    }
-    50%{
-        transform: translateX(-100%);
-    }
-    55%{
-        transform: translateX(-200%);
-    }
-    75%{
-        transform: translateX(-200%);
-    }
-    80%{
-        transform: translateX(-300%);
-    }
-    100%{
-        transform: translateX(-300%);
-    }
+
+
+#expandedImg {
+  max-width: 100%;         /* fill container width but no overflow */
+  max-height: 70vh;        /* keep it within viewport height */
+  object-fit: contain;     /* preserve aspect ratio, no cropping */
+  display: block;          /* removes inline spacing */
+  margin: 0 auto 15px;     /* centers the image horizontally */
 }
-img{
-    width: 100%;
+
+.thumbnail-bar {
+  padding: 10px;
+  background: #f0f0f0;
+  border-top: 1px solid #ccc;
+}
+
+#thumbnailRow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.column img {
+  width: auto;
+  height: 100px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.column img:hover {
+  transform: scale(1.1);
+}
+
+/* Container for the image caption */
+#imgtext {
+  max-width: 80%;
+  margin: 10px auto 0 auto; /* top 10px, horizontal auto centers, bottom 0 */
+  text-align: center;
+  color: #444;
+  font-family: 'Georgia', serif;
+}
+
+/* The title (e.g., artwork name) */
+#imgTitle {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #222;
+}
+
+/* The size and medium info */
+#imgSize,
+#imgMedium {
+  font-size: 16px;
+  margin: 2px 0;
+  color: #666;
+  font-style: italic;
 }

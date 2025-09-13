@@ -1,19 +1,31 @@
+ 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Auto slideshow</title>
-    <!--Stylesheet-->
-    <link rel="stylesheet" href="test/test.css">
+<link href="test/test.css" rel="stylesheet" type="text/css" media="all">
+
 </head>
+
 <body>
-    <div class="autoslides-container">
-        <div class="autoslides-wrapper">
-            <img src="images/Petrichor.jpg">
-            <img src="images/Reclamation.jpg">
-            <img src="images/Snowberries.jpg">
-            <img src="images/The_Ancients.jpg">
-        </div>
+<body>
+  <div class="gallery-wrapper">
+  <div class="expanded-area">
+  
+    <img id="expandedImg" />
+    <div id="imgtext">
+      <h2 id="imgTitle"></h2>
+      <p id="imgSize"></p>
+      <p id="imgMedium"></p>
     </div>
+  </div>
+
+  <div class="thumbnail-bar">
+    <div class="row" id="thumbnailRow"></div>
+  </div>
+</div>
 </body>
-</html>
+
+
+<script src="test/test.js"></script>
+
+</body>
