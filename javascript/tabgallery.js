@@ -15,6 +15,7 @@ function showImage(index) {
 
   const imgData = imagesData[index];
   expandedImg.src = `images/${imgData.src}`;
+  expandedImg.alt = imgData.alt || imgData.title || ''; // <-- Set alt text
   imgTitle.textContent = imgData.title;
   imgSize.textContent = imgData.size;
   imgMedium.textContent = imgData.medium;
@@ -32,8 +33,8 @@ function showImage(index) {
 
 function loadImagesFromManifest() {
   // Get current page name without extension
-  const pagePath = window.location.pathname; // e.g., /folder/page.html
-  const pageName = pagePath.substring(pagePath.lastIndexOf('/') + 1).split('.')[0]; // "page"
+  const pagePath = window.location.pathname;
+  const pageName = pagePath.substring(pagePath.lastIndexOf('/') + 1).split('.')[0];
   
   const manifestFile = `image_manifests/${pageName}.json`;
 
@@ -50,7 +51,7 @@ function loadImagesFromManifest() {
 
         const img = document.createElement("img");
         img.src = `images/${imgData.src}`;
-        img.alt = imgData.title;
+        img.alt = imgData.alt || imgData.title || ''; // <-- Use alt from JSON
         img.onclick = () => showImage(index);
 
         column.appendChild(img);
@@ -64,7 +65,6 @@ function loadImagesFromManifest() {
       console.error(`Error loading ${manifestFile}:`, error);
     });
 }
-
 
 // Left and right click zones for navigation
 document.addEventListener('DOMContentLoaded', () => {
