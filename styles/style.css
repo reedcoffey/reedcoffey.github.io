@@ -1,6 +1,5 @@
 /* Body */
 
-
 body {
   background-color: white;
   color: black;
@@ -11,25 +10,10 @@ body {
   font-size: 10vw;
 }
 
-.vertical-center {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-/* Text formatting */
-
 a { /* link formatting */
   color: inherit; /* keep color the same as everything else*/
   text-decoration: none; /* no underline */
   padding: 20px;
-}
-
-h3 { /*heading formatting */
-  font-weight: normal;
-  text-align: center;
 }
 
 /* Borders and color blocks */
@@ -47,7 +31,7 @@ h3 { /*heading formatting */
   align-items: center;
 }
 
-.textborderleft {
+.textleft {
  border-width:3px;
  border-style:solid;
  border-color:#53784F;
@@ -69,14 +53,6 @@ h3 { /*heading formatting */
   padding-right: 5px;
 }
 
-.images-wrap { /* Structure of each line of images */
-  display: flex; 
-  align-items: center; 
-  padding-left: 10px;
-  justify-content:center;
-  flex-direction:row;
-}
-
 .images-wrap-consistent { /* Structure of each line of images */
   display: flex; 
   align-items: center; 
@@ -91,64 +67,6 @@ h3 { /*heading formatting */
   display: block;
   transition: .5s ease;
   backface-visibility: hidden;
-}
-
-.large-image { /* Image formatting */
-  height: 30vw;
-  width: auto;
-  display: block;
-  transition: .5s ease;
-  backface-visibility: hidden;
-}
-
-.medium-image { /* Image formatting */
-  height: 22vw;
-  width: auto;
-  display: block;
-  transition: .5s ease;
-  backface-visibility: hidden;
-}
-
-.small-image { /* Image formatting */
-  height: 15vw;
-  width: auto;
-  display: block;
-  transition: .5s ease;
-  backface-visibility: hidden;
-}
-
-/* Title display on hover */
-
-.middle { /* Code I ripped to display titles on hover*/
-  transition: .5s ease;
-  opacity: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.container:hover .image { /* Code I ripped to display titles on hover*/
-  opacity: 0.3;
-}
-
-.container:hover .middle { /* Code I ripped to display titles on hover*/
-  opacity: 1;
-}
-
-.div.center{ /* Code I ripped to display titles on hover*/
-  align-items: center; 
-  float: left;
-}
-
-.text { /* Font size for titles of pictures */
-  background-color: #53784F;
-  color: white;
-  font-size: 32px;
-  padding: 16px 32px;
 }
 
 /* Header/footer */
@@ -183,236 +101,109 @@ ul.title-content-list > li > .content { /* other link formatting*/
   font-size: 1.5vw;
 }
 
-
-
 /* Hamburger Navbar */
-.topnav {
-  background-color: #333;
-  overflow: hidden;
-  position: fixed;   /* stays at top */
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;     /* make sure it’s above images */
-}
+  .topnav {
+    background-color: #53784F;
+    overflow: hidden;
+    position: fixed;   /* stays at top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;     /* make sure it’s above images */
+  }
 
-/* Desktop logo / title link */
-.topnav a.active {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: white;
-  text-decoration: none;
-  padding: 14px 16px;
-  display: block;
-}
+  /* Desktop logo / title link */
+  .topnav a.active {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    padding: 14px 16px;
+    display: block;
+  }
 
-/* Links inside mobile menu */
-#myLinks a {
-  display: block;
-  padding: 12px 16px;
-  text-decoration: none;
-  color: white;
-  background: #53784F;
-  text-align: right;
-}
+  /* Links inside mobile menu */
+  #myLinks a {
+    display: block;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: white;
+    background: #53784F;
+    text-align: right;
+  }
 
-/* Links hover effect */
-#myLinks a:hover {
-  background-color: #575757;
-}
+  /* Links hover effect */
+  #myLinks a:hover {
+    background-color: #53784F;
+  }
 
-/* Hamburger icon (top right) */
-.topnav .icon {
-  position: absolute;
-  right: 0;
-  top: 0;
-  padding: 14px 16px;
-  color: white;
-  cursor: pointer;
-}
+  /* Hamburger icon (top right) */
+  .topnav .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 14px 16px;
+    color: white;
+    cursor: pointer;
+  }
 
 .mobile-break { 
      display: none;
   }
 
-
-/* Desktop specific */
+/* Desktop-specific */
 @media only screen and (min-width: 1000px) {
-.ignore-on-desktop
-{
-  display: none;
+  .ignore-on-desktop
+  {
+    display: none;
+  }
 }
-}
 
-
-
-
-/* Mobile formatting */
+/* Mobile-specific */
 
 @media only screen and (max-width: 1000px) {
 
+    .ignore-on-mobile
+    {
+    display: none;
+    }
+    
+    /* Text */
 
-  .ignore-on-mobile
-  {
-  display: none;
+    p {
+      font-size: 16pt;
+    }
+
+  /* Info on hover */
+
+  .text { /* Font size for titles of pictures */
+    background-color: #53784F;
+    color: white;
+    font-size: 45px;
+    padding: 16px 32px;
   }
 
+  /* Altering breaks for mobile display */
 
-  
-  /* Text */
+    .mobile-break { 
+      display: block;
+    margin: 30px 0;
+    }
 
-  p {
-    font-size: 16pt;
+      .mobile-remove-break { 
+      display: none;
+    }
+
+  /* Hamburder menu on mobile*/
+
+  /* Style navigation menu links */
+  .topnav a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 45pt;
+    display: block;
+    background: #53784F;
   }
 
-  /* Header/footer */
-  
-ul.title-content-list > li {
-  display: flex;
-  flex-direction: column; /* Stack children vertically */
-  align-items: center; /* Align content to the start of the column */
-  height: auto; /* Let height grow with content */
-  padding: 10px 0; /* Optional: Add spacing between items */
-}
-
-ul.title-content-list > li > .title { /* homepage link formatting*/
-  font-size: 70px;
-}
-
-ul.title-content-list > li > .content { /* other link formatting*/
-  font-size: 45px;
-  display: flex;
-  flex-direction: column; /* Stack children vertically */
-  align-items: center; /* Align content to the start of the column */
-}
-
-/* Hamburger Navbar */
-.topnav {
-  background-color: #333;
-  overflow: hidden;
-  position: fixed;   /* stays at top */
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;     /* make sure it’s above images */
-}
-
-/* Images */
-
-.images-wrap {
-  display: flex; 
-  align-items: center; 
-  justify-content:center;
-  flex-direction:column;
-}
-
-.images-wrap-mobile {
-  display: none;
-}
-
-.large-image {
- height: 35vw;
-  width: 2auto;
-  display: block;
-  transition: .5s ease;
-  backface-visibility: hidden;
-   padding-bottom: 45px;
-}
-
-.medium-image {
-  height: 30vw;
-  width: auto;
-  display: block;
-  transition: .5s ease;
-  backface-visibility: hidden;
-   padding-bottom: 45px;
-}
-
-.images-wrap{
-  display: none;
-}
-
-.images-wrap-mobile {
-  display: flex; 
-  align-items: center; 
-  justify-content:center;
-  flex-direction:row;
-  flex-wrap: wrap;
-  gap:10px;
-}
-
-/* Info on hover */
-
-.text { /* Font size for titles of pictures */
-  background-color: #53784F;
-  color: white;
-  font-size: 45px;
-  padding: 16px 32px;
-}
-
-/* Altering breaks for mobile display */
-
-  .mobile-break { 
-     display: block;
-   margin: 30px 0;
-  }
-
-    .mobile-remove-break { 
-     display: none;
-  }
-
-
-
-/* Hamburder menu */
-
-
-/* Hide the links inside the navigation menu (except for logo/home) */
-
-* Style the navigation menu */
-.topnav {
-  overflow: hidden;
-  background-color: #53784F;
-  position: relative;
-}
-
-/* Hide the links inside the navigation menu (except for logo/home) */
-.topnav #myLinks {
-  display: none;
-}
-
-#myLinks.show {
-  display: block;
-}
-
-/* Style navigation menu links */
-.topnav a {
-  color: white;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 45pt;
-  display: block;
-  background: #53784F;
-}
-
-/* Style the hamburger menu */
-.topnav a.icon {
-  background: #53784F;
-  display: block;
-  position: absolute;
-  right: 10px;
-  top: 0;
-}
-
-/* Style the active link (or home/logo) */
-.active {
-  background-color: #53784F;
-  color: white;
-}
-  
-.main-content img {
-  display: block;
-  margin-top: -5px; /* adjust slightly to remove gap */
-}
 } /*End of mobile formatting */
-
-  
