@@ -74,11 +74,52 @@ h3 {text-align: center;}
 }
 
 .gridwrapper {
-  display: inline-grid;
+  display: flex;
   grid-template-columns: 50vw 50vw;
   justify-items: center;
 }
 
+@media only screen and (min-width: 1000px) {
+.autoslides-container {
+  height: 87vh; 
+  width: 37vw; 
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 0;
+  position: relative;
+}
+
+.autoslides-wrapper {
+  display: flex;
+  width: calc(4 * 100vw);  
+  animation: slide 12s infinite;
+}
+
+.autoslides-wrapper img {
+  width: 40vw;
+  flex-shrink: 0;
+  height: auto;
+  display: block;
+}
+
+@keyframes slide {
+  0%, 18% {
+    transform: translateX(0);
+  }
+  23%, 41% {
+    transform: translateX(-40vw);
+  }
+  46%, 64% {
+    transform: translateX(calc(-40vw * 2));
+  }
+  69%, 87% {
+    transform: translateX(calc(-40vw * 3));
+  }
+  100%, 100% {
+    transform: translateX(0);
+  }
+}
+}
 
 @media only screen and (max-width: 1000px) {
 
