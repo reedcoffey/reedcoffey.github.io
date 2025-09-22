@@ -53,6 +53,13 @@ a { /* link formatting */
   padding-right: 5px;
 }
 
+.index-container { /* Create space between images on the same line */
+  display:flex;
+  align-items: center; 
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
 .images-wrap-consistent { /* Structure of each line of images */
   display: flex; 
   align-items: center; 
@@ -176,6 +183,12 @@ ul.title-content-list > li > .content { /* other link formatting*/
   justify-content: center;
 }
 
+.bio-wrap-about {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
 .collections-wrap-about {
   display: flex;
   flex-wrap: wrap;
@@ -221,7 +234,11 @@ width: 28vw;
   display: flex;
   flex-wrap: wrap-reverse; 
 }
-
+.bio-wrap-about {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: center;
+}
 
 .about-portrait{
   width: 100%;

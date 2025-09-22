@@ -23,3 +23,57 @@
   z-index: 1;
 }
 
+.images-wrap-about {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 2vw;
+}
+
+.about-collections-images {
+    width: 28vw;
+    text-align: center;
+}
+
+.about-collections-images img {
+    width: 100%;
+    height: auto;
+}
+
+.image-text {
+    font-size: 16pt;
+    width: 100%;
+    margin-top: 1em;
+}
+
+/* Mobile styling */
+@media (max-width: 768px) {
+    .images-wrap-about {
+        display: block;
+    }
+
+    .about-collections-images {
+        width: 100%;
+        margin-bottom: 2vw;
+    }
+
+    .about-collections-images:nth-child(odd) {
+        display: block;
+    }
+
+    .about-collections-images:nth-child(even) {
+        text-align: center;
+    }
+
+    .about-collections-images img {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .image-text {
+        font-size: 14pt;
+        width: 90%;
+        margin: 0 auto;
+        text-align: justify;
+    }
+}
