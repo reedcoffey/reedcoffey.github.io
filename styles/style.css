@@ -3,17 +3,33 @@
 body {
   background-color: white;
   color: black;
-  font-family: 'Helvetica', sans-serif;
+  font-family: "Ubuntu Sans", sans-serif; 
   margin: 0px;
   height: 100%;
   padding: 0;
   font-size: 10vw;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 6;
+}
+
+
+.ubuntu-sans {
+  font-family: "Ubuntu Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
 }
 
 a { /* link formatting */
   color: inherit; /* keep color the same as everything else*/
   text-decoration: none; /* no underline */
   padding: 20px;
+  font-family: "Ubuntu Sans", sans-serif;
 }
 
 /* Borders and color blocks */
