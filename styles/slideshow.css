@@ -56,8 +56,7 @@
   margin transform: translateX(-50%);  /* Centers the dots */
   text-align: center;
   z-index: 10;  
-  margin-top: -10vh
-;         /* Ensure dots are above images */
+  margin-top: -10vh;         /* Ensure dots are above images */
 }
 
 

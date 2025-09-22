@@ -31,6 +31,11 @@ a { /* link formatting */
   align-items: center;
 }
 
+.square-box {
+  width: 30vw;
+  height: 30vw;
+}
+
 .textleft {
  border-width:3px;
  border-style:solid;
