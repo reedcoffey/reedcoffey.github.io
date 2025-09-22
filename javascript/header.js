@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
               </div>
               <a href="other_mediums.html">Other Mediums</a>
+              <a href="about.html">About</a>
               <a href="https://bsky.app/profile/throughthereeds.bsky.social">Bluesky</a>
             </div>
           </li>
@@ -40,6 +41,8 @@ document.addEventListener("DOMContentLoaded", () => {
           <a href="explorations.html">Explorations</a>
           <a href="morphology.html">Morphology</a>
           <a href="other_mediums.html">Other Mediums</a>
+           <a href="about.html">About</a>
+           <a href="https://bsky.app/profile/throughthereeds.bsky.social">Bluesky</a>
         </div>
         <a href="javascript:void(0);" class="icon" id="hamburger-toggle">
           <i class="fa fa-bars"></i>

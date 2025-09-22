@@ -6,6 +6,7 @@
 <link href="styles/style.css" rel="stylesheet" type="text/css" media="all">
 <link href="styles/index.css" rel="stylesheet" type="text/css" media="all">
 <link href="styles/dropdown.css" rel="stylesheet" type="text/css" media="all">
+<link href="styles/slideshow.css" rel="stylesheet" type="text/css" media="all">
 </head>
 
 <body>
@@ -13,79 +14,40 @@
 
 
 
+<div class="slideshowContainer" style="margin-top: 5vh;">     
+  
+<!-- Replace the image 'src' with the images in your project.
+Javascript is set up so that you can add as many images as you like, but make sure that you match the number of 'circle' span elements (below) to the number of images -->
+  <img class="imageSlides" src="images/Petrichor.jpg" alt="beach side city view">
+  <img class="imageSlides" src="images/Lazing_I.jpg" alt="leaf on the ground">
+  <img class="imageSlides" src="images/Snowberries.jpg" alt="lake surrounded by mountains">
+  <img class="imageSlides" src="images/Reclamation.jpg" alt="lake surrounded by mountains">
+  
 
+</div>
+
+
+
+<!-- I would recommend to replace these 'span' elements with 'img' files
+for each the left and right arrow that fits your project, and size accordingly.
+I've shown 'span' elements because I didn't want to upload files. -->
+  <span id ="leftArrow" class="slideshowArrow">&#8249;</span>
+  <span id ="rightArrow" class="slideshowArrow">&#8250;</span>
+
+  <div class="center">
+  <div class="slideshowCircles">
+<!-- Filled 'dot' class is set to first image in slideshow, and then via Javascript the filled 'dot' class follows the current image.
+Make sure you match the number of these 'circle' span elements to the number of images in your slideshow. -->
+    <span class="circle dot"></span>
+    <span class="circle"></span>
+    <span class="circle"></span>
+    <span class="circle"></span>
+  </div>
+</div>
 
  <!-- Main homepage image -->
 <div class="ignore-on-mobile">
 
-
-  
-    <div class="gridwrapper" style="margin-top: 5%; margin-left: -10vw;"> 
-        <div class="images-left">
-          <div class="index-container" style="margin:auto">
-          <img src="images/Petrichor.jpg" alt="A winding path" class="fp-image" id="fp"> 
-          </div>
-        </div>
-          
-        <div class="textborderright" style="background-color: white; border-color: white;">
-          <img src="images/Saguaro_East.jpg" alt="A winding path" class="medium-image" style="width: 35.2vw;  padding-bottom: 2vw; ">  
-          <div class="textborderright" style="background-color: white; border-color: #53784F; width: 30vw; ">
-            <p style="font-size: 1.25vw; color: #53784F; padding-top: 3vw; padding-bottom: 3vw;">  
-            The Pathways series is an examination of the marks people leave on the land as they move through it. Inspired largely by the trailwork that represents a pivotal point in Reed's career, walkways weave through colorful landscapes over the course of several paintings. Both the journey and the destination are celebrated through the realistic style with a touch of whimsy that is characteristic of Reed's work.
-            <br>
-            <br>
-            Pathways inspires curiosity about what's around the next bend of the trail; what sights and secrets the landscape ahead holds. There's a balance to be had between putting one foot ahead of the other, moving through steep terrain or exhaustion, and slowing down to appreciate the space you're in at a given moment.
-            </p>
-          </div>
-        </div>
-      </div>
-<!-- Desktop version -->
-
-    <div class="colorblock" style="color: white;">
-      <div class="images-right">
-        <div class="textleft">
-          <p style="font-size: 1.25vw; color: white;"">
-            Reed Coffey is a visual artist based in Tucson, Arizona. Born in Washington state in 1995, they began painting at age twelve when the flexibility of online school allowed them to take an oil painting class at a local senior center. Their passion for art was reignited in 2021 through art courses at Pima Community College, beginning their most prolific creative period to date. 
-<br>
-<br>
-Rooted in their childhood in the Pacific Northwest and shaped by a career in conservation, Reed’s oil paintings highlight the hidden details of the natural world. Their work captures the the quiet joy of discovery- rounding the corner of a trail to a breathtaking view, lifting a leaf to reveal a cluster of berries, or the visual rhythms present for those who take the time to observe them. 
-<br>
-<br>
-Reed’s work has been featured in group exhibitions at Groundworks, Subspace, and Artistic InQUEERies in Tucson. They received an Honorable Mention in Painting at Pima Community College’s Spring 2021 Juried Student Exhibition and were featured on the cover of the 2022 edition of SandScript.
-          </p>
-        </div>
-        <div class="container">
-          <img src="images/Reed.png" alt="It me" class="medium-image-index" id="portrait"/>
-        </div>
-      </div>
-    </div>
-
-    <!-- Secondary homepage image -->
-
-    <div class="gridwrapper" style="margin-top: 5vw;margin-left: -10vw;"> 
-      <div>
-        <div class="images-right">
-          <div class="container">
-            <div class="textborderright" style="background-color: white; border-color: #53784F; width:22vw; margin-left: 19vw;">
-              <p style="font-size: 1.25vw; color: #53784F; padding-top: 14vw; padding-bottom: 20vw;" >     
-              Morphology is Reed's first large pyrography project. Wood and watercolor come together to depict a variety of berries, drawing attention to the myriad of ways similar structures can express themselves.
-            <div class="link-button-corners" style="width: 15vw; height:4vw; margin-top: -15vw;">
-<p style="font-size: 1.25vw; color: white; text-align: center; ">
-<a href="morphology.html">View Morphology</a>
-</p>
-</div>  
-            
-            </p>
-            </div>
-          </div>
-        </div>
-      </div>
-        <div>
-          <img src="images/Berries_Square.jpg" alt="A green and white mural showing California poppies in the negative" class="bottom-image" id="fp" style="padding-bottom: 5vw; margin-left: -10vw;">   
-        </div> 
-      </div>
-    </div>
-</div>
 
 
 <!-- Mobile version -->
@@ -137,4 +99,5 @@ Reed’s work has been featured in group exhibitions at Groundworks, Subspace, a
 <script src="javascript/footer.js"></script>
 <script src="javascript/header.js"></script>
 <script src="javascript/hamburger.js"></script>
+<script src="javascript/slideshow.js"></script>
 </html>
