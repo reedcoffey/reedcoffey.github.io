@@ -31,11 +31,6 @@ a { /* link formatting */
   align-items: center;
 }
 
-.square-box {
-  width: 30vw;
-  height: 30vw;
-}
-
 .textleft {
  border-width:3px;
  border-style:solid;
@@ -58,14 +53,7 @@ a { /* link formatting */
   padding-right: 5px;
 }
 
-.index-container { /* Create space between images on the same line */
-  display:flex;
-  align-items: center; 
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-.images-wrap-consistent { /* Structure of each line of images */
+.images-wrap-nav { /* Structure of each line of images */
   display: flex; 
   align-items: center; 
   padding-left: 10px;
@@ -73,7 +61,7 @@ a { /* link formatting */
   flex-direction:row;
 }
 
-.xl-image { /* Image formatting */
+.index-portrait { /* Image formatting */
   height: 40vw;
   width: auto;
   display: block;
@@ -155,6 +143,7 @@ ul.title-content-list > li > .content { /* other link formatting*/
     right: 0;
     top: 0;
     padding: 14px 16px;
+    padding-right: 40px;
     color: white;
     cursor: pointer;
   }
@@ -165,26 +154,11 @@ ul.title-content-list > li > .content { /* other link formatting*/
 
 /* Grids */
 
-.threecolumn {
-  display: flex;
-  grid-template-columns: 33vw 33vw 33vw;
-  justify-items: center;
-}
-
 .center {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 200px;
-}
-
-
-/*For test index */
-/* Image wrapper for consistent row behavior */
-.images-wrap-about {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
 }
 
 .bio-wrap-about {
@@ -200,9 +174,6 @@ ul.title-content-list > li > .content { /* other link formatting*/
   flex-direction: column;
 }
 
-.about-collections-images {
-width: 28vw;
-}
 
 .textleftabout{
  border-color:#53784F;
@@ -212,7 +183,7 @@ width: 28vw;
  max-height: 30vw;
 }
 
-.about-portrait{
+.about-images{
   height: 30vw;
 }
 
@@ -233,25 +204,16 @@ width: 28vw;
     {
     display: none;
     }
-    
-.images-wrap-about {
-  display: flex;
-  flex-wrap: wrap-reverse; 
-}
+
 .bio-wrap-about {
   display: flex;
   flex-wrap: wrap-reverse;
   justify-content: center;
 }
 
-.about-portrait{
+.about-images{
   width: 100%;
   height: auto;
-}
-
-.about-collections-images {
-width: 100%; 
-height: auto;
 }
 
 .textleftabout{

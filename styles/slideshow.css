@@ -53,13 +53,11 @@
 .slideshowCircles {
   position: static;       /* Fixes the position relative to the viewport */
   bottom: 50px;          /* Adjust the distance from the footer */
-  margin transform: translateX(-50%);  /* Centers the dots */
+  margin transform: translateX(-50%);  /* Centers the dots, I don't know why it only works formatted incorrectly*/
   text-align: center;
   z-index: 10;  
-  margin-top: -10vh;         /* Ensure dots are above images */
+  margin-top: -10vh; 
 }
-
-
 
 .circle {
   display: inline-block;
@@ -75,18 +73,4 @@
 .dot {
   background-color: #53784F;
   border: solid 2px #53784F;
-}
-@media only screen and (max-width: 1000px) { 
-  .imageSlides {
-    max-width: 100%;   /* Make the image fill the container width on smaller screens */
-    max-height: 80vh;  /* Ensure the image doesn't exceed 80vh */
-    object-fit: contain;
-  }
-
-  .slideshowArrow {
-    font-size: 7em;
-    color: #53784f00;
-    cursor: pointer;
-    transition: opacity 0.2s ease-in-out;
-  }
 }
