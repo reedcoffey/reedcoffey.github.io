@@ -2,8 +2,8 @@ body, html {
   margin: 0;
   padding: 0;
   height: 100%;
-  
 }
+
 
 #thumbnailRow {
   display: flex;
@@ -26,7 +26,7 @@ body, html {
   font-size: 28px;
   font-weight: bold;
   margin-bottom: 5px;
-  color: #222;
+  color: #53784F;
   font-family: "Ubuntu Sans", sans-serif; 
   margin: 0px;
   height: 100%;
@@ -36,14 +36,16 @@ body, html {
   font-style: normal;
   font-variation-settings:
     "wdth" 6;
+   margin-bottom: -30px; 
 }
 
 /* The size and medium info */
 #imgSize,
-#imgMedium {
-  font-size: 16px;
+#imgMedium,
+#imgYear {
+  font-size: 20px; 
   margin: 2px 0;
-  color: #666;
+  color: #53784F;
   font-style: italic;
   font-family: "Ubuntu Sans", sans-serif; 
   margin: 0px;
@@ -54,6 +56,7 @@ body, html {
   font-style: normal;
   font-variation-settings:
     "wdth" 6;
+    padding-top: 5px;
 }
 
 /* Gallery wrapper fills viewport vertically */
@@ -191,15 +194,16 @@ body, html {
   #imgTitle {
     font-size: 35pt;
     font-weight: bold;
-    margin-bottom: 5px;
-    color: #222;
+    color: #53784F;
+    margin-bottom: -30px;
   }
 
   #imgSize,
-  #imgMedium {
+  #imgMedium, 
+  #imgYear {
     font-size: 20pt;
     margin: 2px 0;
-    color: #666;
+    color: #53784F;
     font-style: italic;
   }
 
