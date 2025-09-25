@@ -4,7 +4,7 @@ let currentIndex = 0;
 const expandedImg = document.getElementById("expandedImg");
 const imgTitle = document.getElementById("imgTitle");
 const imgSize = document.getElementById("imgSize");
-const imgMedium = document.getElementById("imgMedium");
+const imgYear = document.getElementById("imgYear");
 const thumbnailRow = document.getElementById("thumbnailRow");
 
 function showImage(index) {
@@ -18,11 +18,11 @@ function showImage(index) {
   expandedImg.alt = imgData.alt || imgData.title || ''; // <-- Set alt text
   imgTitle.textContent = imgData.title;
   imgSize.textContent = imgData.size;
-  imgMedium.textContent = imgData.medium;
+  imgYear.textContent = imgData.year;
 
   // Update selected thumbnail highlight
   Array.from(thumbnailRow.children).forEach((col, i) => {
-    const img = col.querySelector('img');
+    const img = col.querySelector('img'); 
     if (i === index) {
       img.classList.add('selected');
     } else {
