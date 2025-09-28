@@ -90,12 +90,37 @@
 
 
 .imageSlides {
-
   height: auto; 
   width: 100vw;
   max-width: 80vw;
   object-fit: scale-down;
 }
 
+.slideshowArrow {
+  font-size: 800pt;
+  color: #53784f00;
+  cursor: pointer;
+  transition: opacity 0.2s ease-in-out;
+}
+
+#leftArrow {
+  position: absolute;
+  left: 27%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#rightArrow {
+  position: absolute;
+  right: 27%;
+  top: 50%;
+  transform: translate(50%, -50%);
+}
+
+
+.arrowContainer {
+  width: 20vw;
+  overflow: hidden;
+}
 
 }
