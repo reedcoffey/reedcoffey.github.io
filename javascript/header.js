@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
            <a href="about.html">About</a>
            <a href="https://bsky.app/profile/throughthereeds.bsky.social">Bluesky</a>
         </div>
-        <a href="javascript:void(0);" class="icon" id="hamburger-toggle">
+        <a href="javascript:void(0);" class="icon" id="hamburger-toggle" style="width: 10vw; margin-right: -4vw; margin-top: 2.5vw;"> 
           <i class="fa fa-bars"></i>
         </a>
       </div>
