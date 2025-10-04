@@ -3,70 +3,39 @@
 <head>
 <link href="styles/style.css" rel="stylesheet" type="text/css" media="all">
 <link href="styles/dropdown.css" rel="stylesheet" type="text/css" media="all">
-<link href="styles/slideshow.css" rel="stylesheet" type="text/css" media="all">
 <link href="styles/tabgallery.css" rel="stylesheet" type="text/css" media="all">
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<style>
-
-.container {
-  position: relative;
-  display: inline-block;
-}
-
-.colorblock {
-  background-color: #53784F; 
-  width: 100%; 
-  height: auto;
-  padding-top: 1vw;
-  padding-bottom: 1vw;
-}
-
-</style>
 </head>
 
 <body>
 
-
-<!-- Link bar -->
-<script src="javascript/header.js"></script>
-<script src="javascript/hamburger.js"></script>
-
 <br class="mobile-break">
 
-
 <div class="gallery-wrapper">
-
-<div class="expanded-area">
+  <div class="expanded-area">
     <div class="expanded-image-container" id="expandedImageContainer">
       <div class="click-zone left-zone">
       <span class="arrow" style="margin-right: 42vw;">&#10094;</span> <!-- ‹ -->
-    </div>
-
-    <img id="expandedImg" />
-
-    <div class="click-zone right-zone">
-      <span class="arrow" style="margin-left: 42vw;">&#10095;</span> <!-- › --> 
+      </div>
+    <img id="expandedImg"/>
+      <div class="click-zone right-zone">
+        <span class="arrow" style="margin-left: 42vw;">&#10095;</span> <!-- › --> 
+      </div>
     </div>
   </div>
-</div>
 
   <div id="imgtext" style="padding-bottom: 5vh;">
     <h2 id="imgTitle"></h2>
-    
     <p id="imgYear"></p>
-      <p id="imgSize"></p>   
-    
-    
+    <p id="imgSize"></p>   
   </div>
   <div class="thumbnail-bar">
     <div class="row" id="thumbnailRow"></div>
   </div> 
-   
-  
+</div>
 
-
-
-  <script src="javascript/tabgallery.js"></script>
+<script src="javascript/header.js"></script>
+<script src="javascript/hamburger.js"></script>
+<script src="javascript/tabgallery.js"></script>
 <script src="javascript/footer.js"></script>
 
 </body>
