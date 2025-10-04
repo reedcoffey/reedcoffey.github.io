@@ -7,7 +7,10 @@ document.body.insertAdjacentHTML('beforeend', `
          </a> 
   </div>
     <a href="https://bsky.app/profile/throughthereeds.bsky.social">
-      <img src="images/Bsky.png" alt="Bluesky" style="width:42px;height:42px;">
+      <img src="images/Bsky.png" alt="Bluesky" style="width:autox;height:42px; margin-right:-15px;">
+    </a>
+        <a href="mailto:contact@reedcoffey.art">
+      <img src="images/Mail_logo.png" alt="Bluesky" style="width:auto;height:42px;margin-left:-15px;"> 
     </a>
     </div>
 
@@ -18,7 +21,10 @@ document.body.insertAdjacentHTML('beforeend', `
          </a> 
   </div>
     <a href="https://bsky.app/profile/throughthereeds.bsky.social">
-      <img src="images/Bsky.png" alt="Bluesky" style="width:42px;height:42px;">
+      <img src="images/Bsky.png" alt="Bluesky" style="width:auto;height:42px;margin-right:-15px;">
+    </a>
+    <a href="mailto:contact@reedcoffey.art">
+      <img src="images/Mail_logo.png" alt="Email" style="width:auto;height:42px;margin-left:-15px;">
     </a>
     </div>
 </footer>
