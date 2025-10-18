@@ -33,7 +33,7 @@ a { /* link formatting */
 
 /* Borders and color blocks */
 
-.link-button-corners {
+.oilnav__buttons {
   border-radius: 30px;
   background: #53784F;
   padding: 20px;
@@ -44,19 +44,6 @@ a { /* link formatting */
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.textleft {
- border-width:3px;
- border-style:solid;
- border-color:#53784F;
- padding-left: 2.5vw;
- padding-right: 2.5vw;
-  padding-top: 1vw;
- padding-bottom: 1vw;
- margin-left: 13.8vw;
- margin-right: 5vw;
- background-color: #53784F;
 }
 
 /* Images */
@@ -76,7 +63,7 @@ a { /* link formatting */
   flex-direction:row;
 }
 
-.index-portrait { /* Image formatting */
+.index__portrait { /* Image formatting */
   height: 40vw;
   width: auto;
   display: block;
@@ -169,28 +156,13 @@ ul.title-content-list > li > .content { /* other link formatting*/
 
 /* Grids */
 
-.center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 200px;
-}
-
-.bio-wrap-about {
+.about__flexgrid {
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
 }
 
-.collections-wrap-about {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  flex-direction: column;
-}
-
-
-.textleftabout{
+.about__textboxes{
  border-color:#53784F;
  background-color: #53784F;
  justify-content: center;
@@ -198,10 +170,9 @@ ul.title-content-list > li > .content { /* other link formatting*/
  max-height: 30vw;
 }
 
-.about-images{
+.about__images{
   height: 30vw;
 }
-
 
 /* Desktop-specific */
 @media only screen and (min-width: 1000px) {
@@ -220,38 +191,28 @@ ul.title-content-list > li > .content { /* other link formatting*/
     display: none;
     }
 
-.bio-wrap-about {
+.about__flexgrid {
   display: flex;
   flex-wrap: wrap-reverse;
   justify-content: center;
 }
 
-.about-images{
+.about__images{
   width: 100%;
   height: auto;
 }
 
-.textleftabout{
+.about__textboxes{
  border-color:#53784F;
  background-color: #53784F;
  justify-content: center;
  align-items: center;
  max-height: 100%;
 }
-    /* Text */
 
-    p {
-      font-size: 16pt;
-    }
-
-  /* Info on hover */
-
-  .text { /* Font size for titles of pictures */
-    background-color: #53784F;
-    color: white;
-    font-size: 45px;
-    padding: 16px 32px;
-  }
+p {
+  font-size: 16pt;
+}
 
   /* Altering breaks for mobile display */
 
