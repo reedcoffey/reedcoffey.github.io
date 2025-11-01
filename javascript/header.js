@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   <img src="images/Logo1.png" alt="HTML tutorial" style="width:auto;height:5vw;margin-bottom:-10%;">
 </a> 
             <div class="content">
-              <div class="dropdown">
+              <div class="dropdown" style="z-index:11">
                 <button class="dropbtn"><a href="oilnav.html">Oil Paintings</a></button>
                 <div class="dropdown-content">
                   <a href="recent_work.html">Recent Work</a>
