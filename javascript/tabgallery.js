@@ -128,18 +128,31 @@ function swipeDetect(el, callback){
   }, false)
 }
 
-function mobileConSOFF(){
-  if (isMobile){
-    let bunny = document.querySelector('#board')
-    swipeDetect(bunny, function(swipDir){
-      DataTransferItemList.forEach(tile => {
-        tile.classList.remove("smushed")
-      })
-      if(swipeDir == 'left'){
-        showImage(currentIndex - 1)
-      } else if(swipeDetect == 'right'){
-        showImage(currentIndex + 1)
+function mobileConSOFF() {
+  // Check if device is mobile
+  const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+  
+  if (isMobile) {
+    const board = document.querySelector('#board');
+    
+    if (!board) {
+      console.warn("Element with id 'board' not found.");
+      return;
+    }
+
+    swipeDetect(board, function(swipDir) {
+      // Remove 'smushed' class from any elements that have it
+      document.querySelectorAll('.smushed').forEach(tile => {
+        tile.classList.remove("smushed");
+      });
+
+      // Swipe left/right navigation
+      if (swipDir === 'left') {
+        showImage(currentIndex + 1);
+      } else if (swipDir === 'right') {
+        showImage(currentIndex - 1);
       }
-    })
+    });
   }
 }
+
