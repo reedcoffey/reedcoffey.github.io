@@ -22,7 +22,7 @@ function showImage(index) {
   imgSize.textContent = imgData.size || '';
   imgYear.textContent = imgData.year || '';
 
-  // Highlight the selected thumbnail
+  // Highlight selected thumbnail
   Array.from(thumbnailRow.children).forEach((col, i) => {
     const img = col.querySelector('img');
     if (i === index) {
@@ -133,6 +133,24 @@ function mobileConSOFF() {
   }
 }
 
+// Enable keyboard navigation (← / → arrows)
+function enableKeyboardNav() {
+  document.addEventListener('keydown', function(e) {
+    if (imagesData.length === 0) return;
+
+    switch (e.key) {
+      case 'ArrowLeft':
+        showImage(currentIndex - 1);
+        break;
+      case 'ArrowRight':
+        showImage(currentIndex + 1);
+        break;
+      default:
+        break;
+    }
+  });
+}
+
 // Initialize gallery
 document.addEventListener('DOMContentLoaded', () => {
   loadImagesFromManifest();
@@ -144,4 +162,5 @@ document.addEventListener('DOMContentLoaded', () => {
   if (rightZone) rightZone.addEventListener('click', () => showImage(currentIndex + 1));
 
   mobileConSOFF();
+  enableKeyboardNav();
 });
