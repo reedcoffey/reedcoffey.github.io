@@ -8,6 +8,8 @@ const imgYear = document.getElementById("imgYear");
 const thumbnailRow = document.getElementById("thumbnailRow");
 
 function showImage(index) {
+  if (imagesData.length === 0) return;
+
   if (index < 0) index = imagesData.length - 1;
   if (index >= imagesData.length) index = 0;
 
@@ -15,14 +17,14 @@ function showImage(index) {
 
   const imgData = imagesData[index];
   expandedImg.src = `images/${imgData.src}`;
-  expandedImg.alt = imgData.alt || imgData.title || ''; // <-- Set alt text
-  imgTitle.textContent = imgData.title;
-  imgSize.textContent = imgData.size;
-  imgYear.textContent = imgData.year;
+  expandedImg.alt = imgData.alt || imgData.title || '';
+  imgTitle.textContent = imgData.title || '';
+  imgSize.textContent = imgData.size || '';
+  imgYear.textContent = imgData.year || '';
 
-  // Update selected thumbnail highlight
+  // Highlight the selected thumbnail
   Array.from(thumbnailRow.children).forEach((col, i) => {
-    const img = col.querySelector('img'); 
+    const img = col.querySelector('img');
     if (i === index) {
       img.classList.add('selected');
     } else {
@@ -32,17 +34,17 @@ function showImage(index) {
 }
 
 function loadImagesFromManifest() {
-  // Get current page name without extension
   const pagePath = window.location.pathname;
   const pageName = pagePath.substring(pagePath.lastIndexOf('/') + 1).split('.')[0];
-  
   const manifestFile = `image_manifests/${pageName}.json`;
 
   fetch(manifestFile)
-    .then(response => response.json())
+    .then(response => {
+      if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+      return response.json();
+    })
     .then(images => {
       imagesData = images;
-
       thumbnailRow.innerHTML = "";
 
       images.forEach((imgData, index) => {
@@ -51,102 +53,77 @@ function loadImagesFromManifest() {
 
         const img = document.createElement("img");
         img.src = `images/${imgData.src}`;
-        img.alt = imgData.alt || imgData.title || ''; // <-- Use alt from JSON
+        img.alt = imgData.alt || imgData.title || '';
         img.onclick = () => showImage(index);
 
         column.appendChild(img);
         thumbnailRow.appendChild(column);
       });
 
-      // Show first image initially
       showImage(0);
     })
-    .catch(error => {
-      console.error(`Error loading ${manifestFile}:`, error);
-    });
+    .catch(error => console.error(`Error loading ${manifestFile}:`, error));
 }
 
-// Left and right click zones for navigation
-document.addEventListener('DOMContentLoaded', () => {
-  loadImagesFromManifest();
+// Swipe detection helper
+function swipeDetect(el, callback) {
+  let touchsurface = el,
+      swipDir,
+      startX,
+      startY,
+      distX,
+      distY,
+      threshold = 100,
+      restraint = 100,
+      allowedTime = 400,
+      elapsedTime,
+      startTime,
+      handleswipe = callback || function(swipeDir){};
 
-  const leftZone = document.querySelector('.left-zone');
-  const rightZone = document.querySelector('.right-zone');
+  touchsurface.addEventListener('touchstart', function(e) {
+    const touchobj = e.changedTouches[0];
+    swipDir = 'none';
+    startX = touchobj.pageX;
+    startY = touchobj.pageY;
+    startTime = new Date().getTime();
+  }, false);
 
-  leftZone.addEventListener('click', () => {
-    showImage(currentIndex - 1);
-  });
+  touchsurface.addEventListener('touchmove', function(e) {
+    e.preventDefault();
+  }, false);
 
-  rightZone.addEventListener('click', () => {
-    showImage(currentIndex + 1);
-  });
-});
-
-function swipeDetect(el, callback){
-  var touchsurface = el,
-  swipDir,
-  startX,
-  startY,
-  distX,
-  distY,
-  threshold = 150,
-  restraint = 100,
-  allowedTime = 300,
-  elapsedTime,
-  startTime,
-  handleswipe = callback || function(swipeDir){}
-
-  touchsurface.addEventListener('touchstart', function(e){
-    var touchobj = e.changedTouches[0]
-    swipeDir = 'none'
-    dist = 0
-    startX = touchobj.pageX
-    startY = touchobj.pageY
-    startTime = new Date().getTime()
-    e.preventDefault()
-  }, false)
-
-  touchsurface.addEventListener('touchmove', function(e){
-    e.preventDefault()
-  }, false)
-
-  touchsurface.addEventListener('touchend', function(e){
-    var touchobj = e.changedTouches[0]
-    distX = touchobj.pageX - startX
-    distY = touchobj.pageY - startY
-    elapsedTime = new Date().getTime() - startTime
-    if (elapsedTime <= allowedTime){
-      if (Math.abs(distX) >= threshold && Math.abs(distY) <= restraint){
-        swipDir = (distX < 0)? 'left' : 'right'
-      }
-      else if (Math.abs(distY) >= threshold && Math.abs(distX) <= restraint){
-        swipDir = (distY < 0)? 'up' : 'down'
+  touchsurface.addEventListener('touchend', function(e) {
+    const touchobj = e.changedTouches[0];
+    distX = touchobj.pageX - startX;
+    distY = touchobj.pageY - startY;
+    elapsedTime = new Date().getTime() - startTime;
+    if (elapsedTime <= allowedTime) {
+      if (Math.abs(distX) >= threshold && Math.abs(distY) <= restraint) {
+        swipDir = (distX < 0) ? 'left' : 'right';
+      } else if (Math.abs(distY) >= threshold && Math.abs(distX) <= restraint) {
+        swipDir = (distY < 0) ? 'up' : 'down';
       }
     }
-    handleswipe(swipDir)
-    e.preventDefault()
-  }, false)
+    handleswipe(swipDir);
+  }, false);
 }
 
+// Enable mobile swipe gestures
 function mobileConSOFF() {
-  // Check if device is mobile
   const isMobile = /Mobi|Android/i.test(navigator.userAgent);
   
   if (isMobile) {
-    const board = document.querySelector('#board');
-    
-    if (!board) {
-      console.warn("Element with id 'board' not found.");
+    const container = document.querySelector('#expandedImageContainer');
+    if (!container) {
+      console.warn("Element with id 'expandedImageContainer' not found.");
       return;
     }
 
-    swipeDetect(board, function(swipDir) {
-      // Remove 'smushed' class from any elements that have it
+    swipeDetect(container, function(swipDir) {
       document.querySelectorAll('.smushed').forEach(tile => {
         tile.classList.remove("smushed");
       });
 
-      // Swipe left/right navigation
       if (swipDir === 'left') {
         showImage(currentIndex + 1);
       } else if (swipDir === 'right') {
@@ -156,3 +133,15 @@ function mobileConSOFF() {
   }
 }
 
+// Initialize gallery
+document.addEventListener('DOMContentLoaded', () => {
+  loadImagesFromManifest();
+
+  const leftZone = document.querySelector('.left-zone');
+  const rightZone = document.querySelector('.right-zone');
+
+  if (leftZone) leftZone.addEventListener('click', () => showImage(currentIndex - 1));
+  if (rightZone) rightZone.addEventListener('click', () => showImage(currentIndex + 1));
+
+  mobileConSOFF();
+});
