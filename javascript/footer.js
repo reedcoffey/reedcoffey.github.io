@@ -23,7 +23,7 @@ document.body.insertAdjacentHTML('beforeend', `
     <a href="https://bsky.app/profile/throughthereeds.bsky.social">
       <img src="images/Bsky.png" alt="Bluesky" style="width:auto;height:42px;margin-right:-15px;">
     </a>
-    <a href="mailto:contact@reedcoffey.art">
+    <a href="mailto:coffeyreed@proton.me">
       <img src="images/Mail_logo.png" alt="Email" style="width:auto;height:42px;margin-left:-15px;">
     </a>
     </div>
