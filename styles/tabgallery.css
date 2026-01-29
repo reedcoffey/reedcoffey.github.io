@@ -63,9 +63,8 @@ body, html {
 .gallery-wrapper {
   display: flex;
   flex-direction: column;
-  height: 110vh;
+  height: 210vh;
   box-sizing: border-box;
-  padding-top: 5vw;
 }
 
 /* Expanded area grows to fill space, centers content */
@@ -75,18 +74,17 @@ body, html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px;
   box-sizing: border-box;
   overflow: auto;
   text-align: center;
-  max-height: 50vh;
+  max-height: 100vh;
 }
 
 /* Wrapper for image + click zones */
 .expanded-image-container {
   overflow: hidden;
   width: 100%;
-  height: 100%;
+  height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -96,9 +94,9 @@ body, html {
 /* Large image styling */
 #expandedImg {
   max-width: 100%;
-  max-height: 100%;
+  max-height: 80vh;
   width: auto;
-  height: auto;
+  height: 80vh;
   display: block;
   object-fit: contain;
 }
@@ -182,6 +180,33 @@ body, html {
 
 /* Mobile formatting */
 @media only screen and (max-width: 1000px) {
+
+/* Gallery wrapper fills viewport vertically */
+.gallery-wrapper {
+
+  height: 100vh;
+}
+
+/* Expanded area grows to fill space, centers content */
+.expanded-area {
+  max-height: 100vh;
+}
+
+/* Wrapper for image + click zones */
+.expanded-image-container {
+  width: 100%;
+  height: 80vh;
+
+}
+
+/* Large image styling */
+#expandedImg {
+  max-width: 100%;
+  max-height: 40vh;
+  width: auto;
+  height: 40vh;
+
+}
 
   .gallery-wrapper {
     display: flex;
