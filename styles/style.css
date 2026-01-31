@@ -196,6 +196,11 @@ ul.title-content-list > li > .content { /* other link formatting*/
     display: none;
     }
 
+#center-script {
+    width:100%;
+    margin: 0 25vw;
+}
+
 .about__flexgrid {
   display: flex;
   flex-wrap: wrap-reverse;
