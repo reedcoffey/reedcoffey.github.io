@@ -49,8 +49,8 @@ a { /* link formatting */
 /* Images */
 
 #center-script {
-    width:30%;
-    margin: 0 auto;
+    width:30vw;
+    margin: 0 35vw;
 }
 
 .container { /* Create space between images on the same line */
