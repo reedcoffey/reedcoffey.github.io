@@ -197,8 +197,8 @@ ul.title-content-list > li > .content { /* other link formatting*/
     }
 
 #center-script {
-    width:100%;
-    margin: 0 25vw;
+    width:80vw;
+    margin: 0 10vw;
 }
 
 .about__flexgrid {
