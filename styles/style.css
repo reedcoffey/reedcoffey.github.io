@@ -48,6 +48,11 @@ a { /* link formatting */
 
 /* Images */
 
+#center-script {
+    width:30%;
+    margin: 0 auto;
+}
+
 .container { /* Create space between images on the same line */
   display:flex;
   align-items: center; 
