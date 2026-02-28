@@ -1,7 +1,7 @@
 document.body.insertAdjacentHTML('beforeend', `
 <footer>
  <div class="ignore-on-mobile">
-  <div class="title" style="font-size: 20px; margin-top: 2vw;">
+  <div class="title" style="font-size: 20px; margin-top: 12vw;">
     <a href="default.asp">
            <img src="images/Logo1.png" alt="HTML tutorial" style="height:04vw;">
          </a> 
