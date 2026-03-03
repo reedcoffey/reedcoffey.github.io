@@ -138,6 +138,7 @@ ul.title-content-list > li > .content { /* other link formatting*/
     color: rgb(248, 231, 211);
     background: #53784F;
     text-align: right;
+    font-size: 22pt;  
   }
 
   /* Links hover effect */
