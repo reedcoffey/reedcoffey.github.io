@@ -5,6 +5,7 @@ const expandedImg = document.getElementById("expandedImg");
 const imgTitle = document.getElementById("imgTitle");
 const imgSize = document.getElementById("imgSize");
 const imgYear = document.getElementById("imgYear");
+const imgMedium = document.getElementById("imgMedium");
 const thumbnailRow = document.getElementById("thumbnailRow");
 
 function showImage(index) {
@@ -19,8 +20,10 @@ function showImage(index) {
   expandedImg.src = `images/${imgData.src}`;
   expandedImg.alt = imgData.alt || imgData.title || '';
   imgTitle.textContent = imgData.title || '';
-  imgSize.textContent = imgData.size || '';
+  imgSize.textContent = imgData.size || ''; 
   imgYear.textContent = imgData.year || '';
+  imgMedium.textContent = imgData.medium || '';
+
 
   // Highlight selected thumbnail
   Array.from(thumbnailRow.children).forEach((col, i) => {

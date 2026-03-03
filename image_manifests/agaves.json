@@ -5,5 +5,5 @@
   {"src": "Parryi_I.jpg", "title": "Parryi Pair I", "size": "12\"x16\"", "medium": "Oil on canvas", "year":"2020", "alt": "A single Parry's Agave, viewed top-down. It's blue/teal and has a soft, etherial look to it."},
   {"src": "Parryi_II.jpg", "title": "Parryi Pair II", "size": "11\"x14\"", "medium": "Oil on canvas", "year":"2021", "alt": "A single Parry's Agave, viewed top-down. It's teal, with black outlines in a slightly abstracted representation."},
   {"src": "Lophantha.jpg", "title": "Lophantha", "size": "9\"x12\"", "medium": "Oil on canvas", "year":"2021", "alt": "A single green agave, viewed top-down. Its leaves and spines are outlined in gold."},
-  {"src": "Agave_Mini.jpg", "title": "Mini", "size": "2.5\"x3.5\"", "medium": "Oil on canvas", "year":"2022", "alt": "A teeny-tiny painting of an agave. Its leaves fade from blue to white, and it is outlined in gold."}
+  {"src": "Agave_Mini.jpg", "title": "Mini", "size": "2.5\"x3.5\"", "medium": "Oil on canvas", "year":"2022", "alt": "A teeny-tiny painting of an agave. Its leaves fade from blue to rgb(248, 231, 211), and it is outlined in gold."}
 ]

@@ -1,6 +1,6 @@
 /* Body */
 body {
-  background-color: white;
+  background-color: rgb(248, 231, 211);
   color: black;
   font-family: "Ubuntu Sans", sans-serif; 
   margin: 0px;
@@ -13,7 +13,6 @@ body {
   font-variation-settings:
     "wdth" 6;
 }
-
 
 .ubuntu-sans {
   font-family: "Ubuntu Sans", sans-serif;
@@ -33,8 +32,9 @@ a { /* link formatting */
 
 /* Borders and color blocks */
 
+
 .oilnav__buttons {
-  border-radius: 30px;
+  border-radius: 10px;
   background: #53784F;
   padding: 20px;
   width: 200px;
@@ -82,15 +82,16 @@ footer {
   text-align: center;
   padding: 5px;
   background-color: #53784F;
-  color: white;
+  color: rgb(248, 231, 211);
 }
 
 .header {
   padding: 10px;
   text-align: center;
-  color: white;
+  color: rgb(248, 231, 211);
   font-size: 0.5vw;
-  background-image: linear-gradient(#31472E, #53784F);
+  background-color: #53784F;
+  height: 150px;
 }
 
 ul.title-content-list > li { /* stuff for making links at top nice*/
@@ -123,7 +124,7 @@ ul.title-content-list > li > .content { /* other link formatting*/
   .topnav a.active {
     font-size: 1.2rem;
     font-weight: bold;
-    color: white;
+    color: rgb(248, 231, 211);
     text-decoration: none;
     padding: 14px 16px;
     display: block;
@@ -134,7 +135,7 @@ ul.title-content-list > li > .content { /* other link formatting*/
     display: block;
     padding: 12px 16px;
     text-decoration: none;
-    color: white;
+    color: rgb(248, 231, 211);
     background: #53784F;
     text-align: right;
   }
@@ -151,7 +152,7 @@ ul.title-content-list > li > .content { /* other link formatting*/
     top: 0;
     padding: 14px 16px;
     padding-right: 40px;
-    color: white;
+    color: rgb(248, 231, 211);
     cursor: pointer;
   }
 
@@ -239,7 +240,7 @@ p {
 
   /* Style navigation menu links */
   .topnav a {
-    color: white;
+    color: rgb(248, 231, 211);
     padding: 14px 16px;
     text-decoration: none;
     font-size: 45pt;
