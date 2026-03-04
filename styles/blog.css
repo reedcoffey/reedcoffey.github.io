@@ -4,5 +4,10 @@ p {
   margin-left: 30px;
   margin-right: 30px;
   margin-bottom: 30px;
-  font-size: 16pt;
+  font-size: 20pt;
+}
+
+a{
+    color: #53784F;
+    font-size: 30pt;
 }
