@@ -43,13 +43,13 @@
 #leftArrow {
   position: absolute;
   left: 4%;
-  top: 50%;
+  top: 50%; 
   transform: translate(-50%, -50%);
 }
 
 #rightArrow {
   position: absolute;
-  right: 4%;
+  right: 4%; 
   top: 50%;
   transform: translate(50%, -50%);
 }

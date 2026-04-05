@@ -4,36 +4,20 @@
 <link href="styles/style.css" rel="stylesheet" type="text/css" media="all">
 <link href="styles/dropdown.css" rel="stylesheet" type="text/css" media="all">
 <link href="styles/tabgallery.css" rel="stylesheet" type="text/css" media="all">
+<link href="styles/altgallery.css" rel="stylesheet" type="text/css" media="all">
 </head>
 
 <body>
 
-<br class="mobile-break">
 
-<div class="gallery-wrapper">
-  <div class="expanded-area">
-    <div class="expanded-image-container" id="expandedImageContainer">
-      <div class="click-zone left-zone">
-      <span class="arrow" style="margin-right: 42vw;">&#10094;</span> <!-- ‹ -->
-      </div>
-    <img id="expandedImg"/>
-      <div class="click-zone right-zone">
-        <span class="arrow" style="margin-left: 42vw;">&#10095;</span> <!-- › --> 
-      </div>
-    </div>
+  <div class="container">
+  <div class="top">
+    <ul id="gallery-list"></ul>
+    <div id="lightbox-container"></div>
   </div>
-
-  <div id="imgtext" style="padding-bottom: 5vh;">
-    <h2 id="imgTitle"></h2>
-    <p id="imgSize"></p> 
-    <p id="imgMedium"></p>
-    <p id="imgYear"></p>  
-  </div>
-  <div class="thumbnail-bar">
-    <div class="row" id="thumbnailRow"></div>
-  </div> 
 </div>
 
+<script src="javascript/altgallery.js"></script>
 <script src="javascript/header.js"></script>
 <script src="javascript/hamburger.js"></script>
 <script src="javascript/tabgallery.js"></script>

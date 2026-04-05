@@ -96,7 +96,7 @@ footer {
   padding: 10px;
   text-align: center;
   color: rgb(248, 231, 211);
-  font-size: 0.5vw;
+  font-size: 16pt;
   background-color: #53784F;
   height: 150px;
 }
@@ -145,7 +145,7 @@ ul.title-content-list > li > .content { /* other link formatting*/
     color: rgb(248, 231, 211);
     background: #53784F;
     text-align: right;
-    font-size: 22pt;  
+    font-size: 40pt;   
   }
 
   /* Links hover effect */
