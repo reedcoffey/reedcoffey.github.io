@@ -20,7 +20,7 @@
 .top {
   display: flex;
   flex-direction: column;
-  width: 80vw;
+  width: 100vw;
   margin: 10vh auto;
 }
 
@@ -154,6 +154,10 @@
   .lightbox-content img {
     max-height: 60vh;  /* leave space for info */
   }
+
+  .top ul li {
+  width: 45%;
+}
 }
 
 /* Optional footer fix */
