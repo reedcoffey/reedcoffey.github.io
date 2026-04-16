@@ -46,6 +46,20 @@ a { /* link formatting */
   align-items: center;
 }
 
+.index__buttons {
+  border-radius: 10px;
+  background: #53784F;
+  
+  padding: 60px;
+  width: 30vw;
+  height: 40vh;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* Images */
 
 #center-script {

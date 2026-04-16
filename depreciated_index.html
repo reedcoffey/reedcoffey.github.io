@@ -8,7 +8,6 @@
 <link href="styles/style.css" rel="stylesheet" type="text/css" media="all">
 <link href="styles/dropdown.css" rel="stylesheet" type="text/css" media="all">
 <link href="styles/slideshow.css" rel="stylesheet" type="text/css" media="all">
-<link href="styles/newindex.css" rel="stylesheet" type="text/css" media="all">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 </head>
@@ -18,57 +17,61 @@
 
 
 
+<script src="javascript/header.js"></script>
 <script src="javascript/hamburger.js"></script>
-<script src="javascript/newheader.js"></script>
 
 <div class="ignore-on-desktop"><br></div>
 
- <p style="text-align: center; font-size: 40pt; color: #53784F;">REED COFFEY</p>
-      <div class="header">
-        <div class="center">
-        <ul class="title-content-list"style="text-align: center;" >
-          <li>
-            <div class="content">
-              <div class="dropdown" style="z-index:11">
-                <button class="dropbtn"><a href="oilnav.html">Oil Paintings</a></button>
-                <div class="dropdown-content">
-                  <a href="recent_work.html">Recent Work</a>
-                  <a href="agaves.html">Agave Studies</a>
-                  <a href="explorations.html">Explorations</a>
-                </div>
-              </div>
-              <a href="other_mediums.html">Other Mediums</a>
-              <a href="../about.html">About</a>
-              <a href="../blognav.html">Studio Notes</a>
-              <a href="https://bsky.app/profile/throughthereeds.bsky.social">Bluesky</a>
-            </div>
-          </li>
-        </ul></div>
-      </div>
+<img src="images/Aloe_There.jpg" style="width: 100%; margin-bottom: 50px;">
 
-<div class="container" style="padding-top: 5vh;">
+<div class="container">
 
-<div class="index__buttons" style="width: 20vw; margin-bottom: 50px; background-image: url(images/Sonoran_Stillness.jpg);background-size: cover;">
-<p style="font-size: 20pt; color: rgb(248, 231, 211); text-align: center; ">
-<a href="recent_work.html">Oil Paintings</a>
+<div class="oilnav__buttons" style="width: 20vw; margin-bottom: 50px;">
+<p style="font-size: 14pt; color: rgb(248, 231, 211); text-align: center; ">
+<a href="recent_work.html">Recent Work</a>
 </p>
 </div> 
 
-<div class="index__buttons" style="width: 20vw; margin-bottom: 50px; background-image: url(images/Pyrography_poppies.jpg);background-size: cover;"">
-<p style="font-size: 20pt; color: rgb(248, 231, 211); text-align: center; ">
+<div class="oilnav__buttons" style="width: 20vw; margin-bottom: 50px;">
+<p style="font-size: 14pt; color: rgb(248, 231, 211); text-align: center; ">
 <a href="other_mediums.html">Pyrography</a>
 </p>
 </div> 
 
-<div class="index__buttons" style="width: 20vw; margin-bottom: 50px; background-image: url(images/Agave_Study.jpg);background-size: cover;"">
-<p style="font-size: 20pt; color: rgb(248, 231, 211); text-align: center; ">
+<div class="oilnav__buttons" style="width: 20vw; margin-bottom: 50px;">
+<p style="font-size: 14pt; color: rgb(248, 231, 211); text-align: center; ">
 <a href="agaves.html">Agave Studies</a>
 </p>
 </div> 
 
 </div>
+<div class="slideshowContainer" style="margin-bottom: -15vh;">     
+  
+  <img class="imageSlides" src="images/Sonoran_Stillness.jpg" alt="beach side city view">
+  <img class="imageSlides" src="images/Petrichor.jpg" alt="beach side city view">
+  <img class="imageSlides" src="images/Snowberries.jpg" alt="lake surrounded by mountains">
+  <img class="imageSlides" src="images/Reclamation.jpg" alt="lake surrounded by mountains">
+  <img class="imageSlides" src="images/Agave_Study.jpg" alt="lake surrounded by mountains">
+  <img class="imageSlides" src="images/Riverside.jpg" alt="lake surrounded by mountains">
+<div class="arrowContainer">
+  <span id ="leftArrow" class="slideshowArrow" style="overflow: hidden;">&#8249;</span>
+  <span id ="rightArrow" class="slideshowArrow" style="overflow: hidden;">&#8250;</span>
+</div>
+</div>
 
-  <div class="index__colorblock" style="padding-top: 2vw; background-color: #53784F; margin-top: 5vh; margin-bottom: -10vw;">  
+
+
+<span class="circle dot"></span>
+<span class="circle"></span>
+<span class="circle"></span>
+<span class="circle"></span>
+<span class="circle"></span>
+<span class="circle"></span>
+
+
+</div>
+
+  <div class="index__colorblock" style="padding-top: 5vw; background-color: #53784F; margin-top: 15vh; margin-bottom: -10vw;">  
        <div class="container"> 
         <p style="font-size: 17pt; color: rgb(248, 231, 211); padding-left: 5vw; padding-right: 5vw; padding-bottom: 5vw;">
       <br>
@@ -85,7 +88,10 @@
 
     
   </div><br> <br>
-
+  <div class="oilnav__buttons" style="width: 20vw; margin-bottom: 50px;">
+<p style="font-size: 14pt; color: rgb(248, 231, 211); text-align: center; ">
+<a href="blognav.html">Studio Notes</a> 
+</div>
 <!--
 <div id="center-script">
 <script async data-uid="1d134836f7" src="https://reed-coffey-art.kit.com/1d134836f7/index.js"></script> <br> 
