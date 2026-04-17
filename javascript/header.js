@@ -1,12 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
   document.body.insertAdjacentHTML("afterbegin", `
     
-    <a href="index.html" style="text-decoration: none;">
+
 <a href="index.html" style="text-decoration: none;">
   <p style="text-align: center; font-size: 40pt; color: #53784F;">
     REED COFFEY
   </p>
-</a>
 </a>
       <div class="header">
         <div class="center">

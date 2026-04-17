@@ -48,13 +48,16 @@ a { /* link formatting */
 
 .index__buttons {
   border-radius: 10px;
-  background: #53784F;
-  
+  background-size: cover;
+  background-position: center;  /* 👈 key line */
+  background-repeat: no-repeat;
+
   padding: 60px;
   width: 30vw;
   height: 40vh;
   margin-left: auto;
   margin-right: auto;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -106,6 +109,7 @@ a { /* link formatting */
 .index__buttons {
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: 20vw; margin-bottom: 50px;
 }
 
 .index__buttons:hover {
@@ -129,11 +133,11 @@ footer {
   background-color: #53784F;
 }
 
-ul.title-content-list > li { /* stuff for making links at top nice*/
+ul.title-content-list > li {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  height: 6vw; 
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;   /* 👈 consistent vertical space */
 }
 
 ul.title-content-list > li > .title { /* homepage link formatting*/
@@ -232,6 +236,22 @@ ul.title-content-list > li > .content { /* other link formatting*/
     {
     display: none;
     }
+
+    .index__buttons {
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: 60vw; 
+  height: 20vh;
+  margin-bottom: 50px;
+}
+
+  .index__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 5px;
+  padding-right: 5px;
+}
 
 
 #center-script {
