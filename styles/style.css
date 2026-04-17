@@ -13,6 +13,18 @@ body {
   font-variation-settings:
     "wdth" 6;
 }
+.site-title {
+  margin: 0;              /* removes default spacing */
+  text-align: center;
+  font-size: 2.5rem;
+  color: #53784F;
+}
+
+.site-title-link {
+  display: block;
+  text-decoration: none;
+  padding: 10px 0;       /* controlled spacing */
+}
 
 .ubuntu-sans {
   font-family: "Ubuntu Sans", sans-serif;
@@ -28,6 +40,14 @@ a { /* link formatting */
   text-decoration: none; /* no underline */
   padding: 20px;
   font-family: "Ubuntu Sans", sans-serif;
+}
+
+h1 {
+  color: inherit;
+  text-decoration: none;
+  padding: 20px;
+  font-family: "Ubuntu Sans", sans-serif;
+  font-weight: 300; /* 👈 makes it unbold */
 }
 
 /* Borders and color blocks */
