@@ -26,7 +26,7 @@ body, html {
   font-size: 28px;
   font-weight: bold;
   margin-bottom: 5px;
-  color: #53784F;
+  color: rgb(25, 77, 45);
   font-family: "Ubuntu Sans", sans-serif; 
   margin: 0px;
   height: 100%;
@@ -45,7 +45,7 @@ body, html {
 #imgYear {
   font-size: 20px; 
   margin: 2px 0;
-  color: #53784F;
+  color: rgb(25, 77, 45);
   font-style: italic;
   font-family: "Ubuntu Sans", sans-serif; 
   margin: 0px;
@@ -126,7 +126,7 @@ body, html {
 /* Arrows inside click zones */
 .arrow {
   font-size: 3rem;
-  color: #53784F;
+  color: rgb(25, 77, 45);
   pointer-events: none; /* Allows clicks to pass through to .click-zone */
   transition: color 0.3s ease, opacity 0.3s ease;
   opacity: 0.4;
@@ -219,7 +219,7 @@ body, html {
   #imgTitle {
     font-size: 35pt;
     font-weight: bold;
-    color: #53784F;
+    color: rgb(25, 77, 45);
     margin-bottom: -30px;
   }
 
@@ -228,7 +228,7 @@ body, html {
   #imgYear {
     font-size: 20pt;
     margin: 2px 0;
-    color: #53784F;
+    color: rgb(25, 77, 45);
     font-style: italic;
   }
 

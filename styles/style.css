@@ -17,7 +17,7 @@ body {
   margin: 0;              /* removes default spacing */
   text-align: center;
   font-size: 2.5rem;
-  color: #53784F;
+  color: rgb(25, 77, 45);
 }
 
 .site-title-link {
@@ -35,8 +35,14 @@ body {
     "wdth" 100;
 }
 
+p {
+  font-size: 16pt;
+  color: rgb(25, 77, 45);
+}
+
+
 a { /* link formatting */
-  color: inherit; /* keep color the same as everything else*/
+  color: inherit; 
   text-decoration: none; /* no underline */
   padding: 20px;
   font-family: "Ubuntu Sans", sans-serif;
@@ -48,6 +54,18 @@ h1 {
   padding: 20px;
   font-family: "Ubuntu Sans", sans-serif;
   font-weight: 300; /* 👈 makes it unbold */
+  color: rgb(25, 77, 45);
+}
+
+h2 {
+  color: inherit;
+  text-decoration: none;
+  padding: 20px;
+  font-family: "Ubuntu Sans", sans-serif;
+  font-weight: 300; /* 👈 makes it unbold */
+  text-align: center;
+  font-size: 20pt;
+  color: rgb(25, 77, 45);
 }
 
 /* Borders and color blocks */
@@ -55,7 +73,7 @@ h1 {
 
 .oilnav__buttons {
   border-radius: 10px;
-  background: #53784F;
+  background: rgb(25, 77, 45);
   padding: 20px;
   width: 200px;
   height: 4vw;
@@ -141,8 +159,7 @@ h1 {
 
 footer {
   text-align: center;
-  padding: 5px;
-  background-color: #53784F;
+  background-color: rgb(25, 77, 45);
   color: rgb(248, 231, 211);
 }
 
@@ -150,7 +167,7 @@ footer {
   text-align: center;
   color: rgb(248, 231, 211);
   font-size: 16pt;
-  background-color: #53784F;
+  background-color: rgb(25, 77, 45);
 }
 
 ul.title-content-list > li {
@@ -170,7 +187,7 @@ ul.title-content-list > li > .content { /* other link formatting*/
 
 /* Hamburger Navbar */
   .topnav {
-    background-color: #53784F;
+    background-color: rgb(25, 77, 45);
     overflow: hidden;
     position: fixed;   /* stays at top */
     top: 0;
@@ -195,14 +212,15 @@ ul.title-content-list > li > .content { /* other link formatting*/
     padding: 12px 16px;
     text-decoration: none;
     color: rgb(248, 231, 211);
-    background: #53784F;
+    background: rgb(25, 77, 45);
     text-align: right;
     font-size: 40pt;   
+    
   }
 
   /* Links hover effect */
   #myLinks a:hover {
-    background-color: #53784F;
+    background-color: rgb(25, 77, 45);
   }
 
   /* Hamburger icon (top right) */
@@ -229,15 +247,17 @@ ul.title-content-list > li > .content { /* other link formatting*/
 }
 
 .about__textboxes{
- border-color:#53784F;
- background-color: #53784F;
+ border-color:rgb(25, 77, 45);
+ background-color: rgb(25, 77, 45);
  justify-content: center;
  align-items: center;
  max-height: 30vw;
 }
 
 .about__images{
-  height: 30vw;
+  height: 40vw;  
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Desktop-specific */
@@ -257,11 +277,14 @@ ul.title-content-list > li > .content { /* other link formatting*/
     display: none;
     }
 
+ 
+
+
     .index__buttons {
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   width: 60vw; 
-  height: 20vh;
+  height: 10vh;
   margin-bottom: 50px;
 }
 
@@ -291,8 +314,8 @@ ul.title-content-list > li > .content { /* other link formatting*/
 }
 
 .about__textboxes{
- border-color:#53784F;
- background-color: #53784F;
+ border-color:rgb(25, 77, 45);
+ background-color: rgb(25, 77, 45);
  justify-content: center;
  align-items: center;
  max-height: 100%;
@@ -322,7 +345,7 @@ p {
     text-decoration: none;
     font-size: 45pt;
     display: block;
-    background: #53784F;
+    background: rgb(25, 77, 45);
   }
 
 } /*End of mobile formatting */
