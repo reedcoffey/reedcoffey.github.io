@@ -5,7 +5,7 @@
             "name": "Launch Chrome",
             "request": "launch",
             "type": "chrome",
-            "url": "http://localhost:8080",
+            "url": "https://localhost:8080",
             "webRoot": "${workspaceFolder}/docs"
         },
         {
@@ -13,7 +13,7 @@
             "request": "launch",
             "reAttach": true,
             "name": "Launch localhost",
-            "url": "http://localhost/index.html",
+            "url": "https://localhost/index.html",
             "webRoot": "${workspaceFolder}/docs"
         },
     ]
