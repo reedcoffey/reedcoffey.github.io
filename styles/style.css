@@ -85,9 +85,8 @@ h2 {
 }
 
 .index__buttons {
-  border-radius: 10px;
   background-size: cover;
-  background-position: center;  /* 👈 key line */
+  background-position: center; 
   background-repeat: no-repeat;
 
   padding: 60px;
@@ -124,8 +123,6 @@ h2 {
 .index__container {
   display: flex;
   justify-content: center;
-  padding-left: 5px;
-  padding-right: 5px;
 }
 
 .images-wrap-nav { /* Structure of each line of images */
@@ -147,7 +144,8 @@ h2 {
 .index__buttons {
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  width: 20vw; margin-bottom: 50px;
+  width: 20vw; 
+  margin-bottom: 50px;
 }
 
 .index__buttons:hover {
@@ -283,17 +281,19 @@ ul.title-content-list > li > .content { /* other link formatting*/
     .index__buttons {
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  width: 60vw; 
-  height: 10vh;
-  margin-bottom: 50px;
+  width: 100%; 
+  height: 20vh;
+  margin: 0px;
+  padding: 0px;
+}
+
+.index__buttons:hover {
+  transform: scale(1);
+  box-shadow: 0 rgba(0, 0, 0, 0);
 }
 
   .index__container {
-  display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding-left: 5px;
-  padding-right: 5px;
 }
 
 
@@ -321,9 +321,6 @@ ul.title-content-list > li > .content { /* other link formatting*/
  max-height: 100%;
 }
 
-p {
-  font-size: 16pt;
-}
 
   /* Altering breaks for mobile display */
 
@@ -341,9 +338,8 @@ p {
   /* Style navigation menu links */
   .topnav a {
     color: rgb(248, 231, 211);
-    padding: 14px 16px;
+    padding: 114px 16px;
     text-decoration: none;
-    font-size: 45pt;
     display: block;
     background: rgb(25, 77, 45);
   }
