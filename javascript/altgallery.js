@@ -38,10 +38,10 @@ function renderLightbox() {
       <button class="close">&times;</button>
       <img src="images/${img.src}" alt="${img.title}">
       <div class="info">
-        <h2>${img.title}</h2>
-        <p>${img.size}</p>
-        <p>${img.medium}</p>
-        <p>${img.year}</p>
+        <h2 style="color: rgb(255, 255, 255);">${img.title}</h2>
+        <p style="color: rgb(255, 255, 255);">${img.size}</p>
+        <p style="color: rgb(255, 255, 255);">${img.medium}</p>
+        <p style="color: rgb(255, 255, 255);">${img.year}</p>
       </div>
     </div>
   `;
