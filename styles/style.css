@@ -11,8 +11,16 @@ body {
   font-weight: 300;
   font-style: normal;
   font-variation-settings:
-    "wdth" 6;
+  "wdth" 6;
 }
+
+ul {
+  margin: 0;
+  padding: 0;
+  padding-inline-start: 0px;
+
+}
+
 .site-title {
   margin: 0;              /* removes default spacing */
   text-align: center;
